@@ -1,0 +1,7 @@
+.noisy {
+  /* Apply the SVG filter */
+  filter: url(#noise);
+
+  /* Example box-shadow, optional */
+  box-shadow: inset 0px -7px 7.3px rgba(0, 0, 0, 0.2);
+}
