@@ -3,10 +3,10 @@ import TacticalText from "./filters/TacticalText.jsx";
 
 function OurCompany() {
   return (
-    <section className="grid grid-cols-2 min-h-screen">
+    <section className="grid grid-cols-2 h-screen overflow-hidden">
       <div>
         {companyBranches.map((branch) => (
-          <div className="relative">
+          <div key={branch.id} className="relative">
             <img
               className="min-h-screen object-cover opacity-80"
               src={branch.mainImage}
@@ -22,22 +22,27 @@ function OurCompany() {
           </div>
         ))}
       </div>
-      <div className="flex-center">
-        <ol>
-          {companyBranches.map((branch) => (
-            <li key={branch.id} className="p-8 flex-center">
+      <div>
+        <ol className="h-screen flex flex-col justify-center ">
+          {companyBranches.map((branch, i) => (
+            <li key={i} className="p-8 flex h-17 overflow-hidden first:h-auto">
+              {/* first:h-auto */}
               <div className="right flex gap-4 border-t border-gray-a6 pt-3">
                 <div className="pt-1">
                   <div className="flex items-center gap-2">
-                    <span>{branch.number}</span>
-                    <div className="h-2 w-2 bg-red-9"></div>
+                    <span className="text-sm">{branch.number}</span>
+                    <div className="h-1 w-1 bg-red-9"></div>
                   </div>
                 </div>
-                <div className="">
-                  <div className="text-2xl">{branch.title}</div>
+                <div className="grid gap-1">
+                  <div className="text-xl">{branch.title}</div>
                   <p className="text-gray-a7 text-sm">{branch.subtitle}</p>
                   <p className="text-description">{branch.description}</p>
-                  <img src={branch.contentImage} alt="" />
+                  <img
+                    className="h-40 w-auto"
+                    src={branch.contentImage}
+                    alt=""
+                  />
                 </div>
               </div>
             </li>

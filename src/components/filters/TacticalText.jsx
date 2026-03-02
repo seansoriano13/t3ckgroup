@@ -1,3 +1,5 @@
+import Overlay from "./Overlay";
+
 export default function TacticalText({ children, className }) {
   return (
     <>
@@ -33,6 +35,8 @@ export default function TacticalText({ children, className }) {
       <span className={`filter-[url(#text-inner-shadow)] ${className}`}>
         {children}
       </span>
+
+      <Overlay opacity={1} src="/noisy.png" />
     </>
   );
 }

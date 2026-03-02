@@ -10,6 +10,9 @@
   --font-tactic: "TacticSans", sans-serif;
   --font-sans: "Russo One", sans-serif;
 
+  --cursor-default: url(/cursor.png), auto;
+  --cursor-pointer: url(/cursor-pointer.png), pointer;
+
   /* Aliases for quick access */
   --color-primary: var(--red-9);
   --color-primary-hover: var(--red-10);
@@ -79,6 +82,9 @@
   }
   .flex-center {
     @apply flex items-center justify-center;
+  }
+  .flex-between {
+    @apply flex items-center justify-between;
   }
   .tg-box-shadow {
     @apply shadow-[inset_0_-7px_7.3px_rgba(0,0,0,0.4)];
@@ -172,3 +178,22 @@
     }
   }
 }
+
+/* html,
+body {
+  cursor: var(--cursor-default);
+}
+
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+summary,
+label[for] {
+  cursor: var(--cursor-pointer);
+} */
