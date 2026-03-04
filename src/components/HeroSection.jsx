@@ -5,7 +5,7 @@ import Overlay from "./filters/Overlay";
 
 function HeroSection() {
   return (
-    <section className="relative h-screen -mt-29.5">
+    <section className="relative h-screen">
       <video
         autoPlay
         muted

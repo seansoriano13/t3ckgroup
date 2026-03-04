@@ -3,8 +3,11 @@ import { fieldOperations } from "../../data/fieldOps";
 function FieldOperationsCard() {
   return (
     <div className="flex gap-6">
-      {fieldOperations.map((fieldOps) => (
-        <div className="bg-gray-4 border-b-3 border-gray-a6 first:border-red-6 first:opacity-100 opacity-70">
+      {fieldOperations.map((fieldOps, i) => (
+        <div
+          key={i}
+          className="bg-gray-4 border-b-3 border-gray-a6 first:border-red-6 first:opacity-100 opacity-70"
+        >
           <img
             className="h-80 w-full opacity-80 object-cover"
             src={fieldOps.image}

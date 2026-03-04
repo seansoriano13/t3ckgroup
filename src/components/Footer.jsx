@@ -55,15 +55,15 @@ function Footer() {
           </div>
         </div>
         <div className="grid grid-cols-5 gap-y-6">
-          {companyBranches.map((branch) => {
+          {companyBranches.map((branch, i) => {
             const branchLinks = navData[branch.id]?.links || [];
 
             return (
-              <div className="grid gap-6">
+              <div key={i} className="grid gap-6">
                 <div className="">{branch.abbreviation}</div>
                 <ul className="grid gap-3 text-sm text-description ">
-                  {branchLinks.map((link) => (
-                    <li className="">
+                  {branchLinks.map((link, i) => (
+                    <li key={i} className="">
                       <a className="hover:text-red-8" href={link.href}>
                         {formatSubLabel(link.label)}
                       </a>{" "}

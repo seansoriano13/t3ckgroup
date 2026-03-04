@@ -1,9 +1,11 @@
 import { Mail } from "lucide-react";
 import { Phone } from "lucide-react";
 
-function SmallBanner() {
+function SmallBanner({ className = "" }) {
   return (
-    <div className="w-screen h-6 bg-red-1 text-gray-a11 relative flex items-center justify-end">
+    <div
+      className={`${className} w-screen h-6 bg-red-1 text-gray-a11 relative flex items-center justify-end`}
+    >
       <div className="text-xs">Reach Us: </div>
 
       {/* Globe */}

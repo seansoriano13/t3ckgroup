@@ -1,17 +1,458 @@
 export const navData = {
   main: {
+    id: "main",
     cta: "CONTACT US",
     links: [
-      { label: "TG GLOBAL", href: "/tg-global", megaMenu: null },
-      { label: "T3CK TRADING", href: "/t3ck-trading", megaMenu: null },
-      { label: "TCA CONCEPT", href: "/tca-concept", megaMenu: null },
-      { label: "TG ENTERPRISE", href: "/tg-enterprise", megaMenu: null },
-      { label: "DII", href: "/dii", megaMenu: null },
-      { label: "EEOC", href: "/eeoc", megaMenu: null },
+      {
+        id: "tgGlobal",
+        label: "TG GLOBAL TRADE",
+        href: "/tg-global",
+      },
+      {
+        id: "t3ckTrading",
+        label: "T3CK TRADING",
+        href: "/t3ck-trading",
+      },
+      {
+        id: "tcaConcepts",
+        label: "TCA CONCEPTS",
+        href: "/tca-concepts",
+      },
+      {
+        id: "tgEnterprise",
+        label: "TG ENTERPRISE",
+        href: "/tg-enterprise",
+      },
+      {
+        id: "dii",
+        label: "DII",
+        href: "/dii",
+      },
+      {
+        id: "eooc",
+        label: "EOOC",
+        href: "/eooc",
+      },
+    ],
+  },
+};
+
+export const megaMenuData = {
+  tgGlobal: {
+    megaMenu: {
+      leftPanel: {
+        title: "TG GLOBAL TRADE OPC",
+        description:
+          "Integrated solutions across defense, emergency response, infrastructure, and specialized enterprise services.",
+      },
+      rightPanels: [
+        {
+          icon: "/nav-dropdown/crosshair.svg",
+          columnTitle: "Crisis Response & Rescue",
+          links: [
+            {
+              label: "Emergency Medical Equipment",
+              href: "/tg-global/response",
+            },
+            { label: "Fire Fighting Equipment", href: "/tg-global/defense" },
+            {
+              label: "USAR - Search and Rescue",
+              href: "/tg-global/infrastructure",
+            },
+            {
+              label: "Emergency Operations Center",
+              href: "/tg-global/infrastructure",
+            },
+          ],
+        },
+        {
+          icon: "/nav-dropdown/crosshair.svg",
+          columnTitle: "SPECIALIZED AREAS",
+          links: [
+            { label: "Outdoor & Expedition", href: "/tg-global/outdoor" },
+            {
+              label: "Recreation & Leisure",
+              href: "/tg-global/recreation",
+            },
+            {
+              label: "Enterprise Solutions",
+              href: "/tg-global/enterprise",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  t3ckTrading: {
+    megaMenu: {
+      leftPanel: {
+        title: "GLOBAL TRADING & PROCUREMENT",
+        description:
+          "Strategic sourcing, supply chain management, and international trading of mission-critical equipment and materials.",
+      },
+      rightPanels: [
+        {
+          icon: "/nav-dropdown/crosshair.svg",
+          columnTitle: "PRODUCT CATEGORIES",
+          links: [
+            { label: "Tactical Gear", href: "/t3ck-trading/tactical" },
+            { label: "Heavy Equipment", href: "/t3ck-trading/heavy" },
+            { label: "Spare Parts", href: "/t3ck-trading/parts" },
+          ],
+        },
+        {
+          icon: "/nav-dropdown/crosshair.svg",
+          columnTitle: "SERVICES",
+          links: [
+            {
+              label: "Bulk Procurement",
+              href: "/t3ck-trading/procurement",
+            },
+            {
+              label: "Logistics & Delivery",
+              href: "/t3ck-trading/logistics",
+            },
+            {
+              label: "International Shipping",
+              href: "/t3ck-trading/shipping",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  tcaConcepts: {
+    megaMenu: {
+      leftPanel: {
+        title: "FAMILY-ORIENTED ATTRACTIONS",
+        description:
+          "Inclusive, high-capacity amusement systems engineered to provide safe, engaging, and shared entertainment experiences for guests of all ages.",
+      },
+      rightPanels: [
+        {
+          columnTitle: "ATTRACTION TYPES",
+          links: [
+            { label: "Classic Rides", href: "/tca-concept/family/classic" },
+            {
+              label: "Scenic Attractions",
+              href: "/tca-concept/family/scenic",
+            },
+            {
+              label: "Interactive Experiences",
+              href: "/tca-concept/family/interactive",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  tgEnterprise: {
+    megaMenu: {
+      leftPanel: {
+        title: "COMMERCIAL SURPLUS & LIQUIDATION",
+        description:
+          "Access our extensive inventory of high-quality, overstock, and premium mall pull-out goods, providing cost-effective retail solutions without compromising on value.",
+      },
+      rightPanels: [
+        {
+          columnTitle: "RETAIL CATEGORIES",
+          links: [
+            {
+              label: "Wholesale Apparel",
+              href: "/tg-enterprise/surplus/apparel",
+            },
+            {
+              label: "Consumer Electronics",
+              href: "/tg-enterprise/surplus/electronics",
+            },
+            {
+              label: "Assorted Goods",
+              href: "/tg-enterprise/surplus/assorted",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  dii: {
+    megaMenu: {
+      leftPanel: {
+        title: "TRAINING & CAPACITY BUILDING",
+        description:
+          "Comprehensive disaster risk reduction and crisis management training designed to empower government and corporate resilience.",
+      },
+      rightPanels: [
+        {
+          columnTitle: "PROGRAMS",
+          links: [
+            { label: "Crisis Management", href: "/dii/academy/crisis" },
+            {
+              label: "Public Safety Protocols",
+              href: "/dii/academy/safety",
+            },
+            {
+              label: "First Responder Certifications",
+              href: "/dii/academy/certifications",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  eooc: {
+    megaMenu: {
+      leftPanel: {
+        title: "TECHNICAL INTEGRATION SERVICES",
+        description:
+          "End-to-end deployment of unified command systems, including custom website design and seamless API integration for emergency hotlines.",
+      },
+      rightPanels: [
+        {
+          columnTitle: "SERVICE OFFERINGS",
+          links: [
+            {
+              label: "Website Design & Installation",
+              href: "/eeoc/services/web",
+            },
+            {
+              label: "Software Customization",
+              href: "/eeoc/services/software",
+            },
+            {
+              label: "System Integrations",
+              href: "/eeoc/services/integrations",
+            },
+          ],
+        },
+      ],
+    },
+  },
+};
+
+export const navLinks = {
+  main: [
+    { label: "TG GT OPC", href: "/tg-global-trade-opc" },
+    { label: "T3CK TRADING", href: "/t3ck-trading" },
+    { label: "TCA CBS", href: "/tca-concepts" },
+    { label: "TG ENTERPRISE", href: "/tg-enterprise" },
+    { label: "DII", href: "/dii" },
+    { label: "EOOC", href: "/eooc" },
+  ],
+};
+
+export const navData1 = {
+  main: {
+    cta: "CONTACT US",
+    links: [
+      {
+        label: "TG GLOBAL",
+        href: "/tg-global",
+        megaMenu: {
+          leftPanel: {
+            title: "TG GLOBAL TRADE OPC",
+            description:
+              "Integrated solutions across defense, emergency response, infrastructure, and specialized enterprise services.",
+          },
+          rightPanels: [
+            {
+              columnTitle: "CORE DIVISIONS",
+              links: [
+                { label: "Response & Rescue", href: "/tg-global/response" },
+                { label: "Defense & Security", href: "/tg-global/defense" },
+                { label: "Infrastructure", href: "/tg-global/infrastructure" },
+              ],
+            },
+            {
+              columnTitle: "SPECIALIZED AREAS",
+              links: [
+                { label: "Outdoor & Expedition", href: "/tg-global/outdoor" },
+                {
+                  label: "Recreation & Leisure",
+                  href: "/tg-global/recreation",
+                },
+                {
+                  label: "Enterprise Solutions",
+                  href: "/tg-global/enterprise",
+                },
+              ],
+            },
+          ],
+        },
+      },
+
+      {
+        label: "T3CK TRADING",
+        href: "/t3ck-trading",
+        megaMenu: {
+          leftPanel: {
+            title: "GLOBAL TRADING & PROCUREMENT",
+            description:
+              "Strategic sourcing, supply chain management, and international trading of mission-critical equipment and materials.",
+          },
+          rightPanels: [
+            {
+              columnTitle: "PRODUCT CATEGORIES",
+              links: [
+                { label: "Tactical Gear", href: "/t3ck-trading/tactical" },
+                { label: "Heavy Equipment", href: "/t3ck-trading/heavy" },
+                { label: "Spare Parts", href: "/t3ck-trading/parts" },
+              ],
+            },
+            {
+              columnTitle: "SERVICES",
+              links: [
+                {
+                  label: "Bulk Procurement",
+                  href: "/t3ck-trading/procurement",
+                },
+                {
+                  label: "Logistics & Delivery",
+                  href: "/t3ck-trading/logistics",
+                },
+                {
+                  label: "International Shipping",
+                  href: "/t3ck-trading/shipping",
+                },
+              ],
+            },
+          ],
+        },
+      },
+
+      {
+        label: "TCA CONCEPT",
+        href: "/tca-concept",
+        megaMenu: {
+          leftPanel: {
+            title: "DESIGN & INNOVATION",
+            description:
+              "Conceptual design, prototyping, and development of specialized systems, vehicles, and tactical solutions.",
+          },
+          rightPanels: [
+            {
+              columnTitle: "DESIGN SERVICES",
+              links: [
+                { label: "Vehicle Concepts", href: "/tca-concept/vehicles" },
+                {
+                  label: "Equipment Prototyping",
+                  href: "/tca-concept/prototyping",
+                },
+                { label: "Custom Solutions", href: "/tca-concept/custom" },
+              ],
+            },
+            {
+              columnTitle: "TECHNOLOGY FOCUS",
+              links: [
+                { label: "Modular Systems", href: "/tca-concept/modular" },
+                { label: "R&D Projects", href: "/tca-concept/rd" },
+              ],
+            },
+          ],
+        },
+      },
+
+      {
+        label: "TG ENTERPRISE",
+        href: "/tg-enterprise",
+        megaMenu: {
+          leftPanel: {
+            title: "ENTERPRISE SOLUTIONS",
+            description:
+              "End-to-end business support, facility management, and large-scale project execution for government and private sectors.",
+          },
+          rightPanels: [
+            {
+              columnTitle: "BUSINESS SERVICES",
+              links: [
+                {
+                  label: "Facility Management",
+                  href: "/tg-enterprise/facilities",
+                },
+                {
+                  label: "Project Management",
+                  href: "/tg-enterprise/projects",
+                },
+                { label: "Consulting", href: "/tg-enterprise/consulting" },
+              ],
+            },
+            {
+              columnTitle: "KEY SECTORS",
+              links: [
+                {
+                  label: "Government Contracts",
+                  href: "/tg-enterprise/government",
+                },
+                {
+                  label: "Corporate Solutions",
+                  href: "/tg-enterprise/corporate",
+                },
+              ],
+            },
+          ],
+        },
+      },
+
+      {
+        label: "DII",
+        href: "/dii",
+        megaMenu: {
+          leftPanel: {
+            title: "DII – DEFENSE & INDUSTRIAL INITIATIVES",
+            description:
+              "Focused division delivering advanced industrial and defense-related products, training, and integration services.",
+          },
+          rightPanels: [
+            {
+              columnTitle: "PRODUCT LINES",
+              links: [
+                { label: "Industrial Systems", href: "/dii/industrial" },
+                { label: "Defense Integration", href: "/dii/defense" },
+                { label: "Training Programs", href: "/dii/training" },
+              ],
+            },
+            {
+              columnTitle: "SUPPORT",
+              links: [
+                { label: "Maintenance & Upgrades", href: "/dii/maintenance" },
+                { label: "Technical Support", href: "/dii/support" },
+              ],
+            },
+          ],
+        },
+      },
+
+      {
+        label: "EEOC",
+        href: "/eeoc",
+        megaMenu: {
+          leftPanel: {
+            title: "EEOC – EMERGENCY & OPERATIONAL CAPACITY",
+            description:
+              "Specialized emergency operations, capacity building, and rapid-response coordination services.",
+          },
+          rightPanels: [
+            {
+              columnTitle: "OPERATIONAL AREAS",
+              links: [
+                { label: "Emergency Planning", href: "/eeoc/planning" },
+                { label: "Crisis Response", href: "/eeoc/response" },
+                { label: "Training & Drills", href: "/eeoc/training" },
+              ],
+            },
+            {
+              columnTitle: "RESOURCES",
+              links: [
+                { label: "Equipment Deployment", href: "/eeoc/equipment" },
+                { label: "Command Support", href: "/eeoc/command" },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
 
-  "tg-global": {
+  tgGlobal: {
     cta: "REQUEST A QUOTE",
     links: [
       {
@@ -228,7 +669,7 @@ export const navData = {
     ],
   },
 
-  "t3ck-trading": {
+  t3ckTrading: {
     cta: "REQUEST A QUOTE",
     links: [
       {
@@ -405,7 +846,7 @@ export const navData = {
     ],
   },
 
-  "tca-concepts": {
+  tcaConcepts: {
     cta: "REQUEST A QUOTE",
     links: [
       {
@@ -576,7 +1017,7 @@ export const navData = {
     ],
   },
 
-  "tg-enterprise": {
+  tgEnterprise: {
     cta: "REQUEST A QUOTE",
     links: [
       {
