@@ -1,4 +1,4 @@
-import { companyBranches } from "../../data/companyBranches.js";
+import { companyBranches } from "../data/companyBranches.js";
 import TacticalText from "./filters/TacticalText.jsx";
 
 function OurCompany() {

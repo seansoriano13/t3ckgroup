@@ -1,8 +1,8 @@
-import { companyBranches } from "../../data/companyBranches";
+import { companyBranches } from "../data/companyBranches";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
 import Overlay from "../components/filters/Overlay";
-import { navData } from "../../data/navData";
+import { navData } from "../data/navData";
 
 function Footer() {
   const formatSubLabel = (label) =>

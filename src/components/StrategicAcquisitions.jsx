@@ -1,4 +1,4 @@
-import { strategicAcquisitionData } from "../../data/strategicAcquisitionData.js";
+import { strategicAcquisitionData } from "../data/strategicAcquisitionData.js";
 import Overlay from "./filters/Overlay.jsx";
 import SecondaryButton from "./SecondaryButton";
 

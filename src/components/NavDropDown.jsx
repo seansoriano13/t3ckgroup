@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { navData } from "../../data/nav/navData";
+import { navData } from "../data/nav/navData";
 
 const NavDropDown = forwardRef(({ activeMenu, activeTab }, ref) => {
   const navDropDownData = navData[activeTab] || {};

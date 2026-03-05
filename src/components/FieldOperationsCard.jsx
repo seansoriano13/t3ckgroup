@@ -1,4 +1,4 @@
-import { fieldOperations } from "../../data/fieldOps";
+import { fieldOperations } from "../data/fieldOps";
 
 function FieldOperationsCard() {
   return (

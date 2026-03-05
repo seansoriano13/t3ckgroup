@@ -1,5 +1,5 @@
 import React from "react";
-import { missionPartnersImage } from "../../data/missionPartnersImage";
+import { missionPartnersImage } from "../data/missionPartnersImage";
 
 const partners = missionPartnersImage;
 

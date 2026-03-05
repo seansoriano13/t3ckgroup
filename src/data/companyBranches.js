@@ -1,20 +1,20 @@
-import opcContent from "../src/assets/our-company/content/opc.png";
-import opcMain from "../src/assets/our-company/main/opc.png";
+import opcContent from "../assets/our-company/content/opc.png";
+import opcMain from "../assets/our-company/main/opc.png";
 
-import t3ckContent from "../src/assets/our-company/content/t3ck.png";
-import t3ckMain from "../src/assets/our-company/main/t3ck.png";
+import t3ckContent from "../assets/our-company/content/t3ck.png";
+import t3ckMain from "../assets/our-company/main/t3ck.png";
 
-import entContent from "../src/assets/our-company/content/ent.png";
-import entMain from "../src/assets/our-company/main/ent.png";
+import entContent from "../assets/our-company/content/ent.png";
+import entMain from "../assets/our-company/main/ent.png";
 
-import tcaContent from "../src/assets/our-company/content/tca.png";
-import tcaMain from "../src/assets/our-company/main/tca.png";
+import tcaContent from "../assets/our-company/content/tca.png";
+import tcaMain from "../assets/our-company/main/tca.png";
 
-import diiContent from "../src/assets/our-company/content/dii.png";
-import diiMain from "../src/assets/our-company/main/dii.png";
+import diiContent from "../assets/our-company/content/dii.png";
+import diiMain from "../assets/our-company/main/dii.png";
 
-import eoocContent from "../src/assets/our-company/content/eooc.png";
-import eoocMain from "../src/assets/our-company/main/eooc.png";
+import eoocContent from "../assets/our-company/content/eooc.png";
+import eoocMain from "../assets/our-company/main/eooc.png";
 
 export const companyBranches = [
   {

@@ -1,6 +1,6 @@
-import BulacanImage from "../src/assets/field-operations/bulacan-rescuelympics.png";
-import Cadrrmo from "../src/assets/field-operations/6th-cadrrmo.png";
-import PhilMarine from '"../src/assets/field-operations/philmarine.png"';
+import BulacanImage from "../assets/field-operations/bulacan-rescuelympics.png";
+import Cadrrmo from "../assets/field-operations/6th-cadrrmo.png";
+import PhilMarine from "../assets/field-operations/philmarine.png";
 
 export const fieldOperations = [
   {

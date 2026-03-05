@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import NavDropDown from "./NavDropDown.jsx";
 import useMegaMenu from "../utils/useMegaMenu.jsx";
-import { navData } from "../../data/nav/navData.js";
+import { navData } from "../data/nav/navData.js";
 import { useLocation } from "react-router";
 
 gsap.registerPlugin(ScrollTrigger);
