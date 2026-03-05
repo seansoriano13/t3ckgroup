@@ -55,6 +55,8 @@ function Footer() {
           </div>
         </div>
         <div className="grid grid-cols-5 gap-y-6">
+          {}
+
           {companyBranches.map((branch, i) => {
             const branchLinks = navData[branch.id]?.links || [];
 
