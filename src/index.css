@@ -100,6 +100,9 @@
     background-color: rgba(0, 0, 0, 0.2); /* optional dim */
     z-index: 40; /* below nav if nav is z-50 */
   }
+  .h-screen-nav {
+    @apply h-[calc(100vh-96px)];
+  }
 }
 
 /* =========================================
