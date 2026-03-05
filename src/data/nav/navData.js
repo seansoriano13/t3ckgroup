@@ -72,7 +72,7 @@ export const navData = {
             ],
           },
           {
-            icon: DEFAULT_ICON,
+            icon: "/nav-dropdown/gear.svg",
             title: "SPECIALIZED AREAS",
             links: [
               { label: "Outdoor & Expedition" },
@@ -91,7 +91,7 @@ export const navData = {
         },
         rightPanel: [
           {
-            icon: DEFAULT_ICON,
+            icon: "/nav-dropdown/gear.svg",
             title: "PRODUCT CATEGORIES",
             links: [
               { label: "Tactical Gear" },
@@ -100,7 +100,7 @@ export const navData = {
             ],
           },
           {
-            icon: DEFAULT_ICON,
+            icon: "/nav-dropdown/logistics.svg",
             title: "SERVICES",
             links: [
               { label: "Bulk Procurement" },
@@ -123,7 +123,7 @@ export const navData = {
         },
         rightPanel: [
           {
-            icon: DEFAULT_ICON,
+            icon: "/nav-dropdown/camp.svg",
             title: "ATTRACTION TYPES",
             links: [
               { label: "Classic Rides", href: "/tca-concept/family/classic" },
@@ -146,7 +146,7 @@ export const navData = {
         },
         rightPanel: [
           {
-            icon: DEFAULT_ICON,
+            icon: "/nav-dropdown/gear.svg",
             title: "RETAIL CATEGORIES",
             links: [
               {

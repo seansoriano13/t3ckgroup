@@ -8,7 +8,7 @@ function Overlay({ src = "", className = "", opacity }) {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         opacity: opacity || 0.05,
-        // mixBlendMode: "overlay", // optional, gives blend effect
+        // mixBlendMode: "overlay", // optional
       }}
     />
   );

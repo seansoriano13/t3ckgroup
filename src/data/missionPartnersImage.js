@@ -1,7 +1,72 @@
 // src/assets/images/missionPartners.js
 
 export const missionPartnersImage = [
+  { src: "/mission-partners/aha-centre.jpg", alt: "aha-centre" },
+  { src: "/mission-partners/albay-flag.png", alt: "albay-flag" },
+  { src: "/mission-partners/antipolo-city.png", alt: "antipolo-city" },
+  { src: "/mission-partners/balanga-seal.png", alt: "balanga-seal" },
+  { src: "/mission-partners/baras-flag.png", alt: "baras-flag" },
   {
+    src: "/mission-partners/Flag_of_Santa_Maria,_Ilocos_Sur.png",
+    alt: "flag-of-santa-maria-ilocos-sur",
+  },
+  {
+    src: "/mission-partners/Flag_of_San_Vicente,_Palawan.png",
+    alt: "flag-of-san-vicente-palawan",
+  },
+  { src: "/mission-partners/jalajala-flag.png", alt: "jalajala-flag" },
+  { src: "/mission-partners/libmanan-flag.png", alt: "libmanan-flag" },
+  { src: "/mission-partners/marikina-seal.png", alt: "marikina-seal" },
+  { src: "/mission-partners/montalban-flag.png", alt: "montalban-flag" },
+  { src: "/mission-partners/national-defense.png", alt: "national-defense" },
+  {
+    src: "/mission-partners/philippine-marine-corps.png",
+    alt: "philippine-marine-corps",
+  },
+  { src: "/mission-partners/province-palawan.jfif", alt: "province-palawan" },
+  { src: "/mission-partners/red-cross.png", alt: "red-cross" },
+  { src: "/mission-partners/tagbilaran-seal.png", alt: "tagbilaran-seal" },
+  { src: "/mission-partners/tayabas-logo.png", alt: "tayabas-logo" },
+  { src: "/mission-partners/taytay.png", alt: "taytay" },
+  { src: "/mission-partners/vigan.png", alt: "vigan" },
+  { src: "/mission-partners/world-vision.png", alt: "world-vision" },
+  {
+    src: "https://images.cdn-files-a.com/uploads/7049230/400_filter_nobg_637da848a7db5.png",
+    alt: "Philippine Red Cross",
+  },
+  {
+    src: "https://images.cdn-files-a.com/uploads/7049230/400_filter_nobg_637da864ec187.jpg",
+    alt: "Partner 2",
+  },
+  {
+    src: "https://images.cdn-files-a.com/uploads/7049230/400_filter_nobg_637da874f2e64.png",
+    alt: "Partner 3",
+  },
+  {
+    src: "https://images.cdn-files-a.com/uploads/7049230/400_filter_nobg_637da98238a63.png",
+    alt: "Partner 4",
+  },
+  {
+    src: "https://images.cdn-files-a.com/uploads/7049230/400_filter_nobg_63817fc08e70e.png",
+    alt: "Partner 5",
+  },
+  {
+    src: "https://images.cdn-files-a.com/uploads/7049230/400_filter_nobg_637da9964d369.png",
+    alt: "Partner 6",
+  },
+  {
+    src: "https://images.cdn-files-a.com/uploads/7049230/400_filter_nobg_637da9fe740e3.png",
+    alt: "Partner 7",
+  },
+  {
+    src: "https://images.cdn-files-a.com/uploads/7049230/400_filter_nobg_637daa36c9248.png",
+    alt: "Partner 8",
+  },
+];
+
+/*
+
+{
     src: "https://images.cdn-files-a.com/uploads/7049230/400_filter_nobg_637da848a7db5.png",
     alt: "Philippine Red Cross",
   },
@@ -145,4 +210,5 @@ export const missionPartnersImage = [
     src: "https://images.cdn-files-a.com/uploads/7049230/400_661f81d288c3a.png",
     alt: "Partner 36",
   },
-];
+
+  */

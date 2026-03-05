@@ -2,7 +2,7 @@ import { companyBranches } from "../data/companyBranches";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
 import Overlay from "../components/filters/Overlay";
-import { navData } from "../data/navData";
+import { navData } from "../data/nav/navData.js";
 
 function Footer() {
   const formatSubLabel = (label) =>
@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <div className="relative ">
-      <Overlay className="z-0" opacity={0.15} src="/overlay/footer.jpg" />
+      <Overlay className="z-0" opacity={0.1} src="/overlay/footer.jpg" />
       <div className="wrapper relative py-8 px-16 grid gap-12 grid-cols-[35%_65%]">
         <div className="grid gap-4">
           <img src="/main-logo-w-text.png" alt="" />

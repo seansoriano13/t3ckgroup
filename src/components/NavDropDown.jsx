@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { navData } from "../data/nav/navData";
+import { navData } from "../data/nav/navData.js";
 
 const NavDropDown = forwardRef(({ activeMenu, activeTab }, ref) => {
   const navDropDownData = navData[activeTab] || {};
@@ -15,7 +15,7 @@ const NavDropDown = forwardRef(({ activeMenu, activeTab }, ref) => {
     >
       <div className="wrapper mx-auto max-w-7xl">
         <div className="grid grid-cols-[40%_60%] gap-8">
-          <div className="w-75 grid gap-6 pr-8">
+          <div className="w-75 flex flex-col gap-6 pr-8">
             <p className="text-xs uppercase">{title}</p>
             <p className="text-xs text-description">{description}</p>
           </div>
@@ -24,7 +24,8 @@ const NavDropDown = forwardRef(({ activeMenu, activeTab }, ref) => {
             {rightPanel.map((column, colIndex) => (
               <div key={colIndex} className="relative flex flex-col gap-6">
                 <img
-                  className="absolute -top-8 -left-8 opacity-50"
+                  color="text-red-8"
+                  className="absolute -top-8 -left-8 opacity-20 w-20 h-auto pointer-events-none"
                   src={column.icon}
                   alt=""
                 />
