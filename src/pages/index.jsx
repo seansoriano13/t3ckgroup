@@ -8,7 +8,7 @@ import StrategicAcquisitions from "../components/StrategicAcquisitions";
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      <HeroSection src="/videos/tg-main-hero.mp4" />
       <MissionPartners />
       <StrategicAcquisitions />
       <OurCompany />

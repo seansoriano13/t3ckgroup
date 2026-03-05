@@ -11,7 +11,7 @@
   --font-sans: "Russo One", sans-serif;
 
   --cursor-default: url(/cursor.png), auto;
-  --cursor-pointer: url(/cursor-pointer.png), pointer;
+  /* --cursor-pointer: url(/cursor-pointer.png), pointer; */
 
   /* Aliases for quick access */
   --color-primary: var(--red-9);

@@ -3,7 +3,7 @@ export const companyBranches = [
     id: "tg-global",
     number: "01",
     title: "TG GLOBAL TRADE OPC",
-    abbreviation: "TG GT",
+    abbreviation: "TGGT",
     subtitle: "Strategic Defense Procurement",
     description:
       "Authorized contractor for National Government agencies and International Defense bodies. Specializing in large-scale acquisition and cross-border logistics.",

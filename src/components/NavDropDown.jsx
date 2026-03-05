@@ -1,11 +1,11 @@
 import { forwardRef } from "react";
-import { megaMenuData } from "../../data/navData";
 import { navData } from "../../data/nav/navData";
 
-const NavDropDown = forwardRef(({ activeMenu, currentTab }, ref) => {
-  const branchData = megaMenuData[activeMenu] || {};
-  const { megaMenu } = branchData;
-  const { leftPanel = {}, rightPanels = [] } = megaMenu || {};
+const NavDropDown = forwardRef(({ activeMenu, activeTab }, ref) => {
+  const navDropDownData = navData[activeTab] || {};
+  const megaMenuData = navDropDownData.megaMenu || {};
+  const megaMenu = megaMenuData[activeMenu] || {};
+  const { leftPanel = {}, rightPanel = [] } = megaMenu;
   const { title, description } = leftPanel;
 
   return (
@@ -21,15 +21,15 @@ const NavDropDown = forwardRef(({ activeMenu, currentTab }, ref) => {
           </div>
 
           <div className="grid grid-cols-3">
-            {rightPanels.map((column, colIndex) => (
-              <div key={colIndex} className="relative grid gap-6">
+            {rightPanel.map((column, colIndex) => (
+              <div key={colIndex} className="relative flex flex-col gap-6">
                 <img
                   className="absolute -top-8 -left-8 opacity-50"
                   src={column.icon}
                   alt=""
                 />
                 <div className="text-xs text-gray-7 uppercase">
-                  {column.columnTitle}
+                  {column.title}
                 </div>
                 <ul className="flex flex-col gap-3">
                   {column.links.map((link, i) => (

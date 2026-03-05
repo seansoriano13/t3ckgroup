@@ -2,11 +2,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PrimaryButton from "./PrimaryButton.jsx";
 import SmallBanner from "./SmallBanner.jsx";
 import gsap from "gsap";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import NavDropDown from "./NavDropDown.jsx";
 import useMegaMenu from "../utils/useMegaMenu.jsx";
-import { navData } from "../../data/navData.js";
+import { navData } from "../../data/nav/navData.js";
+import { useLocation } from "react-router";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,11 +26,37 @@ function navLinkBorder() {
   );
 }
 
+// EXTRACT DATA TO CONFIG SOON
+const getActiveTab = (pathname) => {
+  if (pathname === "/") return "main";
+
+  const navDataKey = pathname.slice(1);
+
+  switch (navDataKey) {
+    case "tggt-opc":
+      return "tggtOpc";
+    case "t3cktrading":
+      return "t3ckTrading";
+    case "tca-cbs":
+      return "tcaCbs";
+    case "tg-ent":
+      return "tgEnt";
+    case "dii":
+      return "dii";
+    case "eooc":
+      return "eooc";
+    default:
+      return navDataKey;
+  }
+};
+
 function Navbar() {
+  const location = useLocation();
+  const pathname = location.pathname;
   const navRef = useRef();
 
   const navDropDownRef = useRef();
-  const [currentTab, setCurrentTab] = useState("main");
+  const activeTab = getActiveTab(pathname);
   const { activeMenu, handleMouseEnter, handleMouseLeave } = useMegaMenu();
 
   useGSAP(
@@ -90,7 +117,7 @@ function Navbar() {
     { scope: navDropDownRef, dependencies: [activeMenu] },
   );
 
-  const navLinks = navData[currentTab]?.links || [];
+  const navLinks = navData[activeTab]?.links || [];
   const backdropRef = useRef();
 
   return (
@@ -99,22 +126,22 @@ function Navbar() {
         <SmallBanner className="banner" />
         <div onMouseLeave={handleMouseLeave} className="w-full relative">
           <div className="wrapper py-2 flex justify-between items-center">
-            <a href="/">
+            <a className="hover:scale-110 transition-all" href="/">
               <img className="w-14 h-auto" src="/main-logo.svg" alt="Logo" />
             </a>
 
-            <ul className="flex-center gap-4">
-              {navLinks.map((mainLink, i) => (
+            <ul className="flex-center gap-4 uppercase">
+              {navLinks.map((navLink, i) => (
                 <li
                   key={i}
-                  onMouseEnter={() => handleMouseEnter(mainLink.id)}
+                  onMouseEnter={() => handleMouseEnter(navLink.menuKey)}
                   className="group relative list-none py-4"
                 >
                   <a
-                    href={mainLink.href}
-                    className="relative z-10 block p-4 text-xs text-gray-12 hover:text-red-9 hover:bg-gray-a2 transition-all"
+                    href={navLink.href}
+                    className="cursor-pointer relative z-10 block p-4 text-xs text-gray-12 hover:text-red-9 hover:bg-gray-a2 transition-all"
                   >
-                    {mainLink.label}
+                    {navLink.label}
                     {navLinkBorder()}
                   </a>
                 </li>
@@ -125,11 +152,10 @@ function Navbar() {
             </div>
           </div>
 
-          {/* Dropdown sits safely inside the MouseLeave zone */}
           <NavDropDown
             ref={navDropDownRef}
             activeMenu={activeMenu}
-            activeTab={currentTab}
+            activeTab={activeTab}
           />
         </div>
       </nav>

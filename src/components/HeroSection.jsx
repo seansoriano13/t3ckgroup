@@ -3,7 +3,11 @@ import Noisy from "./Noisy";
 import PrimaryButton from "./PrimaryButton";
 import Overlay from "./filters/Overlay";
 
-function HeroSection() {
+function HeroSection({
+  src = "/videos/tg-main-hero.mp4",
+  upperText = "GEAR YOU TRUST",
+  lowerText = "WHEN IT MATTERS MOST",
+}) {
   return (
     <section className="relative h-screen">
       <video
@@ -13,12 +17,12 @@ function HeroSection() {
         loop
         className="w-full h-screen object-cover opacity-30 "
       >
-        <source src="/videos/tg-main-hero.mp4" type="video/mp4" />
+        <source src={src} type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 flex flex-col gap-6 items-center justify-center z-20">
         <h1 className="wrapper text-5xl text-center font-tactic">
-          GEAR YOU TRUST <br /> WHEN IT MATTERS MOST
+          {upperText} <br /> {lowerText}
         </h1>
 
         <div>

@@ -232,7 +232,7 @@ export const megaMenuData = {
 export const navLinks = {
   main: [
     { label: "TG GT OPC", href: "/tg-global-trade-opc" },
-    { label: "T3CK TRADING", href: "/t3ck-trading" },
+    { label: "T3CK TRADING", href: "/t3cktrading" },
     { label: "TCA CBS", href: "/tca-concepts" },
     { label: "TG ENTERPRISE", href: "/tg-enterprise" },
     { label: "DII", href: "/dii" },
@@ -548,7 +548,7 @@ export const navData1 = {
             description:
               "Professional-grade equipment and technical apparel engineered to withstand extreme environmental conditions and remote exploration.",
           },
-          rightPanels: [
+          rightPanel: [
             {
               columnTitle: "FIELD SHELTER & APPAREL",
               links: [

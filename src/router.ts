@@ -5,6 +5,12 @@ import { components, hooks, utils } from '@generouted/react-router/client'
 
 export type Path =
   | `/`
+  | `/dii`
+  | `/eooc`
+  | `/t3cktrading`
+  | `/tca-cbs`
+  | `/tg-ent`
+  | `/tggt-opc`
 
 export type Params = {
   
