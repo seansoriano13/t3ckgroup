@@ -1,3 +1,21 @@
+import opcContent from "../src/assets/our-company/content/opc.png";
+import opcMain from "../src/assets/our-company/main/opc.png";
+
+import t3ckContent from "../src/assets/our-company/content/t3ck.png";
+import t3ckMain from "../src/assets/our-company/main/t3ck.png";
+
+import entContent from "../src/assets/our-company/content/ent.png";
+import entMain from "../src/assets/our-company/main/ent.png";
+
+import tcaContent from "../src/assets/our-company/content/tca.png";
+import tcaMain from "../src/assets/our-company/main/tca.png";
+
+import diiContent from "../src/assets/our-company/content/dii.png";
+import diiMain from "../src/assets/our-company/main/dii.png";
+
+import eoocContent from "../src/assets/our-company/content/eooc.png";
+import eoocMain from "../src/assets/our-company/main/eooc.png";
+
 export const companyBranches = [
   {
     id: "tg-global",
@@ -7,8 +25,8 @@ export const companyBranches = [
     subtitle: "Strategic Defense Procurement",
     description:
       "Authorized contractor for National Government agencies and International Defense bodies. Specializing in large-scale acquisition and cross-border logistics.",
-    contentImage: "../src/assets/our-company/content/opc.png",
-    mainImage: "../src/assets/our-company/main/opc.png",
+    contentImage: opcContent,
+    mainImage: opcMain,
     link: "/tg-global",
   },
   {
@@ -19,8 +37,8 @@ export const companyBranches = [
     subtitle: "Medical & Critical Care Devices",
     description:
       "Specialized distributor of professional-grade medical equipment, rescue technologies, and critical care devices for healthcare and emergency frontliners.",
-    contentImage: "../src/assets/our-company/content/t3ck.png",
-    mainImage: "../src/assets/our-company/main/t3ck.png",
+    contentImage: t3ckContent,
+    mainImage: t3ckMain,
     link: "/t3ck-trading",
   },
   {
@@ -31,8 +49,8 @@ export const companyBranches = [
     subtitle: "Retail & Dealer Network",
     description:
       "Consumer-facing division managing local dealer networks and direct retail operations. Bringing professional-grade gear to the civilian market.",
-    contentImage: "../src/assets/our-company/content/ent.png",
-    mainImage: "../src/assets/our-company/main/ent.png",
+    contentImage: entContent,
+    mainImage: entMain,
     link: "/tg-enterprise",
   },
   {
@@ -43,8 +61,8 @@ export const companyBranches = [
     subtitle: "Infrastructure & Engineering",
     description:
       "Heavy engineering division focused on specialized construction, theme park architecture, and complex resort infrastructure development.",
-    contentImage: "../src/assets/our-company/content/tca.png",
-    mainImage: "../src/assets/our-company/main/tca.png",
+    contentImage: tcaContent,
+    mainImage: tcaMain,
     link: "/tca-concept",
   },
   {
@@ -55,8 +73,8 @@ export const companyBranches = [
     subtitle: "Strategic Risk Consulting",
     description:
       "Providing high-level disaster risk management, intelligence consulting, and specialized training programs for corporate and government partners.",
-    contentImage: "../src/assets/our-company/content/dii.png",
-    mainImage: "../src/assets/our-company/main/dii.png",
+    contentImage: diiContent,
+    mainImage: diiMain,
     link: "/dii",
   },
   {
@@ -67,8 +85,8 @@ export const companyBranches = [
     subtitle: "24/7 Command & Monitoring",
     description:
       "A centralized, always-on command hub providing real-time situational awareness, rapid response coordination, and critical communications support.",
-    contentImage: "../src/assets/our-company/content/eooc.png",
-    mainImage: "../src/assets/our-company/main/eooc.png",
+    contentImage: eoocContent,
+    mainImage: eoocMain,
     link: "/eeoc",
   },
 ];
