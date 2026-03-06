@@ -40,7 +40,7 @@ function OurCompany() {
         tl.to(items[i - 1], { height: "3rem", opacity: 0.5 })
           .to(leftImages[i - 1], { opacity: 0 }, "<")
 
-          .to(item, { fontSize: "18px", height: "auto", opacity: 1 }, "<")
+          .to(item, { height: "auto", opacity: 1 }, "<")
           .to(leftImages[i], { opacity: 1 }, "<")
 
           .to({}, { duration: 0.5 });

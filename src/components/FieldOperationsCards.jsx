@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { fieldOperations } from "../data/fieldOps";
 
-function FieldOperationsCard() {
+function FieldOperationsCards() {
   const [selectedId, setSelectedId] = useState(null);
 
   const handleSelect = (id) => {
@@ -36,4 +36,4 @@ function FieldOperationsCard() {
   );
 }
 
-export default FieldOperationsCard;
+export default FieldOperationsCards;
