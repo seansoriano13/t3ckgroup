@@ -8,6 +8,7 @@ export type Path =
   | `/contact-us`
   | `/dii`
   | `/eooc`
+  | `/request-a-quote`
   | `/t3cktrading`
   | `/tca-cbs`
   | `/tg-ent`

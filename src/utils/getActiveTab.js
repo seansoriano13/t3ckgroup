@@ -2,9 +2,9 @@
 export const getActiveTab = (pathname) => {
   if (pathname === "/") return "main";
 
-  const navDataKey = pathname.slice(1);
+  const key = pathname.slice(1);
 
-  switch (navDataKey) {
+  switch (key) {
     case "tggt-opc":
       return "tggtOpc";
     case "t3cktrading":
@@ -17,6 +17,8 @@ export const getActiveTab = (pathname) => {
       return "dii";
     case "eooc":
       return "eooc";
+    case "contact-us":
+      return "contactUs";
     default:
       return "main";
   }

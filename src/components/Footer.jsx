@@ -25,8 +25,10 @@ function Footer() {
             infrastructure solutions for national defense and local resilience.
           </p>
           <div className="flex gap-4">
-            <PrimaryButton className={"text-sm"} label={"REQUEST A QUOTE"} />
-            <SecondaryButton label={"CONTACT T3CK"} />
+            <a href="/request-a-quote">
+              <PrimaryButton className={"text-sm"} label={"REQUEST A QUOTE"} />
+            </a>
+            <SecondaryButton className={"text-sm"} label={"CONTACT T3CK"} />
           </div>
           <p className="text-gray-a5 text-sm">
             @ 2026 T3CKGROUP. ALL RIGHTS RESERVED.
@@ -82,7 +84,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="relative pt-20 w-full h-auto z-10 opacity-30">
+      <div className="relative pt-20 w-full h-auto z-10 opacity-40">
         <img className="w-full object-cover" src="/footer-logo.png" alt="" />
       </div>
       <div className="absolute inset-0 z-0 pointer-events-none">

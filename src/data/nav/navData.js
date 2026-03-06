@@ -18,198 +18,201 @@ const company = {
   ],
 };
 
-export const navData = {
-  main: {
-    cta: "CONTACT US",
-    links: [
-      {
-        label: "TGGT OPC",
-        href: "/tggt-opc",
-        menuKey: "tggtOpc",
+const main = {
+  cta: "CONTACT US",
+  links: [
+    {
+      label: "TGGT OPC",
+      href: "/tggt-opc",
+      menuKey: "tggtOpc",
+    },
+    {
+      label: "T3CK TRADING",
+      href: "/t3cktrading",
+      menuKey: "t3ckTrading",
+    },
+    {
+      label: "TCA CBS",
+      href: "/tca-cbs",
+      menuKey: "tcaCbs",
+    },
+    {
+      label: "TG ENT",
+      href: "/tg-ent",
+      menuKey: "tgEnt",
+    },
+    {
+      label: "DII",
+      href: "/dii",
+      menuKey: "dii",
+    },
+    {
+      label: "EOOC",
+      href: "/eooc",
+      menuKey: "eooc",
+    },
+  ],
+  megaMenu: {
+    tggtOpc: {
+      leftPanel: {
+        title: "TG GLOBAL TRADE OPC",
+        description:
+          "Integrated solutions across defense, emergency response, infrastructure, and specialized enterprise services.",
       },
-      {
-        label: "T3CK TRADING",
-        href: "/t3cktrading",
-        menuKey: "t3ckTrading",
-      },
-      {
-        label: "TCA CBS",
-        href: "/tca-cbs",
-        menuKey: "tcaCbs",
-      },
-      {
-        label: "TG ENT",
-        href: "/tg-ent",
-        menuKey: "tgEnt",
-      },
-      {
-        label: "DII",
-        href: "/dii",
-        menuKey: "dii",
-      },
-      {
-        label: "EOOC",
-        href: "/eooc",
-        menuKey: "eooc",
-      },
-    ],
-    megaMenu: {
-      tggtOpc: {
-        leftPanel: {
-          title: "TG GLOBAL TRADE OPC",
-          description:
-            "Integrated solutions across defense, emergency response, infrastructure, and specialized enterprise services.",
+      rightPanel: [
+        {
+          icon: DEFAULT_ICON,
+          title: "CRISIS RESPONSE & RESCUE",
+          links: [
+            { label: "Emergency Medical Equipment" },
+            { label: "Fire Fighting Equipment" },
+            { label: "USAR - Search and Rescue" },
+            { label: "Emergency Operations Center" },
+          ],
         },
-        rightPanel: [
-          {
-            icon: DEFAULT_ICON,
-            title: "CRISIS RESPONSE & RESCUE",
-            links: [
-              { label: "Emergency Medical Equipment" },
-              { label: "Fire Fighting Equipment" },
-              { label: "USAR - Search and Rescue" },
-              { label: "Emergency Operations Center" },
-            ],
-          },
-          {
-            icon: "/nav-dropdown/gear.svg",
-            title: "SPECIALIZED AREAS",
-            links: [
-              { label: "Outdoor & Expedition" },
-              { label: "Recreation & Leisure" },
-              { label: "Enterprise Solutions" },
-            ],
-          },
-        ],
-      },
+        {
+          icon: "/nav-dropdown/gear.svg",
+          title: "SPECIALIZED AREAS",
+          links: [
+            { label: "Outdoor & Expedition" },
+            { label: "Recreation & Leisure" },
+            { label: "Enterprise Solutions" },
+          ],
+        },
+      ],
+    },
 
-      t3ckTrading: {
-        leftPanel: {
-          title: "T3CK TRADING",
-          description:
-            "Specialized distributor of professional-grade medical equipment, rescue technologies, and critical care devices for healthcare and emergency frontliners.",
-        },
-        rightPanel: [
-          {
-            icon: "/nav-dropdown/gear.svg",
-            title: "PRODUCT CATEGORIES",
-            links: [
-              { label: "Tactical Gear" },
-              { label: "Heavy Equipment" },
-              { label: "Spare Parts" },
-            ],
-          },
-          {
-            icon: "/nav-dropdown/logistics.svg",
-            title: "SERVICES",
-            links: [
-              { label: "Bulk Procurement" },
-              {
-                label: "Logistics & Delivery",
-              },
-              {
-                label: "International Shipping",
-              },
-            ],
-          },
-        ],
+    t3ckTrading: {
+      leftPanel: {
+        title: "T3CK TRADING",
+        description:
+          "Specialized distributor of professional-grade medical equipment, rescue technologies, and critical care devices for healthcare and emergency frontliners.",
       },
+      rightPanel: [
+        {
+          icon: "/nav-dropdown/gear.svg",
+          title: "PRODUCT CATEGORIES",
+          links: [
+            { label: "Tactical Gear" },
+            { label: "Heavy Equipment" },
+            { label: "Spare Parts" },
+          ],
+        },
+        {
+          icon: "/nav-dropdown/logistics.svg",
+          title: "SERVICES",
+          links: [
+            { label: "Bulk Procurement" },
+            {
+              label: "Logistics & Delivery",
+            },
+            {
+              label: "International Shipping",
+            },
+          ],
+        },
+      ],
+    },
 
-      tcaCbs: {
-        leftPanel: {
-          title: "TCA CONCEPT BUILDERS AND SERVICES",
-          description:
-            "Heavy engineering division focused on specialized construction, theme park architecture, and complex resort infrastructure development.",
-        },
-        rightPanel: [
-          {
-            icon: "/nav-dropdown/camp.svg",
-            title: "ATTRACTION TYPES",
-            links: [
-              { label: "Classic Rides", href: "/tca-concept/family/classic" },
-              {
-                label: "Scenic Attractions",
-              },
-              {
-                label: "Interactive Experiences",
-              },
-            ],
-          },
-        ],
+    tcaCbs: {
+      leftPanel: {
+        title: "TCA CONCEPT BUILDERS AND SERVICES",
+        description:
+          "Heavy engineering division focused on specialized construction, theme park architecture, and complex resort infrastructure development.",
       },
+      rightPanel: [
+        {
+          icon: "/nav-dropdown/camp.svg",
+          title: "ATTRACTION TYPES",
+          links: [
+            { label: "Classic Rides", href: "/tca-concept/family/classic" },
+            {
+              label: "Scenic Attractions",
+            },
+            {
+              label: "Interactive Experiences",
+            },
+          ],
+        },
+      ],
+    },
 
-      tgEnt: {
-        leftPanel: {
-          title: "TG ENTERPRISE",
-          description:
-            "Consumer-facing division managing local dealer networks and direct retail operations. Bringing professional-grade gear to the civilian market.",
-        },
-        rightPanel: [
-          {
-            icon: "/nav-dropdown/gear.svg",
-            title: "RETAIL CATEGORIES",
-            links: [
-              {
-                label: "Wholesale Apparel",
-              },
-              {
-                label: "Consumer Electronics",
-              },
-              {
-                label: "Assorted Goods",
-              },
-            ],
-          },
-        ],
+    tgEnt: {
+      leftPanel: {
+        title: "TG ENTERPRISE",
+        description:
+          "Consumer-facing division managing local dealer networks and direct retail operations. Bringing professional-grade gear to the civilian market.",
       },
+      rightPanel: [
+        {
+          icon: "/nav-dropdown/gear.svg",
+          title: "RETAIL CATEGORIES",
+          links: [
+            {
+              label: "Wholesale Apparel",
+            },
+            {
+              label: "Consumer Electronics",
+            },
+            {
+              label: "Assorted Goods",
+            },
+          ],
+        },
+      ],
+    },
 
-      dii: {
-        leftPanel: {
-          title: "DISASTER INTELLIGENCE INC.",
-          description:
-            "Providing high-level disaster risk management, intelligence consulting, and specialized training programs for corporate and government partners.",
-        },
-        rightPanel: [
-          {
-            icon: DEFAULT_ICON,
-            title: "PROGRAMS",
-            links: [
-              { label: "Crisis Management" },
-              { label: "Public Safety Protocols" },
-              {
-                label: "First Responder Certifications",
-              },
-            ],
-          },
-        ],
+    dii: {
+      leftPanel: {
+        title: "DISASTER INTELLIGENCE INC.",
+        description:
+          "Providing high-level disaster risk management, intelligence consulting, and specialized training programs for corporate and government partners.",
       },
+      rightPanel: [
+        {
+          icon: DEFAULT_ICON,
+          title: "PROGRAMS",
+          links: [
+            { label: "Crisis Management" },
+            { label: "Public Safety Protocols" },
+            {
+              label: "First Responder Certifications",
+            },
+          ],
+        },
+      ],
+    },
 
-      eooc: {
-        leftPanel: {
-          title: "EVERY DAY EMERGENCY OPERATIONS CENTE",
-          description:
-            "A centralized, always-on command hub providing real-time situational awareness, rapid response coordination, and critical communications support.",
-        },
-        rightPanel: [
-          {
-            icon: DEFAULT_ICON,
-            title: "SERVICE OFFERINGS",
-            links: [
-              {
-                label: "Website Design & Installation",
-              },
-              {
-                label: "Software Customization",
-              },
-              {
-                label: "System Integrations",
-              },
-            ],
-          },
-        ],
+    eooc: {
+      leftPanel: {
+        title: "EVERY DAY EMERGENCY OPERATIONS CENTE",
+        description:
+          "A centralized, always-on command hub providing real-time situational awareness, rapid response coordination, and critical communications support.",
       },
+      rightPanel: [
+        {
+          icon: DEFAULT_ICON,
+          title: "SERVICE OFFERINGS",
+          links: [
+            {
+              label: "Website Design & Installation",
+            },
+            {
+              label: "Software Customization",
+            },
+            {
+              label: "System Integrations",
+            },
+          ],
+        },
+      ],
     },
   },
+};
+
+export const navData = {
+  main: main,
+  contactUs: main,
   tggtOpc: {
     cta: "REQUEST A QUOTE",
     links: [

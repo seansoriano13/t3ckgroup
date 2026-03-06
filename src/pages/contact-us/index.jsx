@@ -1,11 +1,22 @@
+import { useLocation } from "react-router";
 import Grainient from "../../components/filters/Grainient";
-import Overlay from "../../components/filters/Overlay";
-import Noisy from "../../components/Noisy";
 import PrimaryButton from "../../components/PrimaryButton";
+import { getActiveTab } from "../../utils/getActiveTab";
+import { formContents } from "../../data/formContents";
 
 function ContactUs() {
   const focusStyle = "focus:outline-none focus:border-b-gray-10";
   const inputStyle = `h-12 placeholder:text-sm border-b border-gray-a6 ${focusStyle}`;
+
+  const location = useLocation();
+  const pathname = location.pathname;
+  const activeTab = getActiveTab(pathname);
+
+  const formContentData = formContents[activeTab] || {};
+  const backgroundText = formContentData.backgroundText;
+  const formTitle = formContentData.formTitle;
+  const formDescription = formContentData.formDescription;
+  const { sections = [] } = formContentData;
 
   return (
     <>
@@ -45,49 +56,47 @@ function ContactUs() {
 
           {/* HEADER TITLE */}
           <h1 className="absolute top-6 left-10 text-center text-[125px] leading-40 text-gray-a3">
-            PARTNER WITH US
+            {backgroundText}
           </h1>
 
           {/* INPUTS */}
-          <div className="justify-self-center grid gap-6 top-30 px-8 py-10 drop-shadow-2xl backdrop-blur-xs bg-gray-a1 w-166.25 border border-gray-a6">
+          <div className="justify-self-center grid gap-8 top-30 px-8 py-10 drop-shadow-2xl backdrop-blur-xs bg-gray-a1 w-166.25 border border-gray-a6">
             <div className="grid gap-1">
-              <h2 className="text-2xl">Partner With Us</h2>
-
-              <p className=" text-xs text-description">
-                Ready to scale your operations with our mission-critical
-                expertise and infrastructure?
-              </p>
+              <h2 className="text-2xl">{formTitle}</h2>
+              <p className="text-xs text-description">{formDescription}</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-8">
-              <input
-                placeholder="Full Name"
-                className={inputStyle}
-                type="text"
-              />
-              <input
-                placeholder="Professional Email Address"
-                className={inputStyle}
-                type="email"
-              />
-              <input
-                placeholder="Contact Number"
-                className={inputStyle}
-                type="phone"
-              />
-              <input
-                placeholder="Designation / Role"
-                className={inputStyle}
-                type="text"
-              />
-              <input placeholder="Role" className={inputStyle} type="text" />
-              <input placeholder="Company" className={inputStyle} type="text" />
-              <textarea
-                placeholder="Message"
-                className={`h-18 col-span-2 placeholder:text-sm border-b border-gray-a6 ${focusStyle}`}
-              ></textarea>
+            <div className="grid gap-8">
+              {sections?.map((section) => (
+                <div className="grid gap-6" key={section.id}>
+                  <h3>{section.title}</h3>
+                  <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                    {section.fields.map((field) => {
+                      if (field.textArea) {
+                        return (
+                          <textarea
+                            key={field.name}
+                            placeholder={field.placeholder}
+                            className={`h-18 col-span-${field.gridSpan} placeholder:text-sm border-b border-gray-a6 ${focusStyle}`}
+                          />
+                        );
+                      }
+
+                      return (
+                        <input
+                          key={field.name}
+                          type={field.type}
+                          placeholder={field.placeholder}
+                          className={`col-span-${field.gridSpan} ${inputStyle}`}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
             </div>
-            <PrimaryButton label={"SUBMIT"} />
+
+            <PrimaryButton label={formContentData.submitLabel || "SUBMIT"} />
           </div>
         </div>
       </div>

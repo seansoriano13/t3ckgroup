@@ -28,12 +28,15 @@ function navLinkBorder() {
 }
 
 function Navbar() {
-  const location = useLocation();
-  const pathname = location.pathname;
   const navRef = useRef();
 
-  const navDropDownRef = useRef();
+  // CURRENT TAB
+  const location = useLocation();
+  const pathname = location.pathname;
   const activeTab = getActiveTab(pathname);
+
+  const navDropDownRef = useRef();
+
   const { activeMenu, handleMouseEnter, handleMouseLeave } = useMegaMenu();
 
   useGSAP(
