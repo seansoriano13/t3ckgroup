@@ -8,6 +8,7 @@ import NavDropDown from "./NavDropDown.jsx";
 import useMegaMenu from "../utils/useMegaMenu.jsx";
 import { navData } from "../data/nav/navData.js";
 import { useLocation } from "react-router";
+import { getActiveTab } from "../utils/getActiveTab.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,30 +26,6 @@ function navLinkBorder() {
     </div>
   );
 }
-
-// EXTRACT DATA TO CONFIG SOON
-const getActiveTab = (pathname) => {
-  if (pathname === "/") return "main";
-
-  const navDataKey = pathname.slice(1);
-
-  switch (navDataKey) {
-    case "tggt-opc":
-      return "tggtOpc";
-    case "t3cktrading":
-      return "t3ckTrading";
-    case "tca-cbs":
-      return "tcaCbs";
-    case "tg-ent":
-      return "tgEnt";
-    case "dii":
-      return "dii";
-    case "eooc":
-      return "eooc";
-    default:
-      return navDataKey;
-  }
-};
 
 function Navbar() {
   const location = useLocation();

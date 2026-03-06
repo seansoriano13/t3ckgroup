@@ -37,10 +37,10 @@ function OurCompany() {
       items.forEach((item, i) => {
         if (i === 0) return;
 
-        tl.to(items[i - 1], { height: "3rem", opacity: 0.5 })
+        tl.to(items[i - 1], { height: "3rem", opacity: 0.5, fontSize: 14 })
           .to(leftImages[i - 1], { opacity: 0 }, "<")
 
-          .to(item, { height: "auto", opacity: 1 }, "<")
+          .to(item, { height: "auto", opacity: 1, fontSize: 18 }, "<")
           .to(leftImages[i], { opacity: 1 }, "<")
 
           .to({}, { duration: 0.5 });
@@ -91,7 +91,7 @@ function OurCompany() {
                 </div>
               </div>
               <div className="grid gap-1">
-                <div className="text-sm">{branch.title}</div>
+                <div className="">{branch.title}</div>
                 <p className="text-gray-a7 text-xs">{branch.subtitle}</p>
                 <p className="text-description text-xs">{branch.description}</p>
                 <img className="h-40 w-auto" src={branch.contentImage} alt="" />
