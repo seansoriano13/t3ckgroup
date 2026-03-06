@@ -1,12 +1,19 @@
-import { companyBranches } from "../data/companyBranches";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
 import Overlay from "../components/filters/Overlay";
-import { navData } from "../data/nav/navData.js";
+
+import { getActiveTab } from "../utils/getActiveTab.js";
+import { useLocation } from "react-router";
+import { footerData } from "../data/footer/footerData.js";
 
 function Footer() {
   const formatSubLabel = (label) =>
     label.charAt(0).toUpperCase() + label.slice(1).toLowerCase();
+  const location = useLocation();
+  const pathname = location.pathname;
+  const activeTab = getActiveTab(pathname);
+
+  const { links } = footerData[activeTab] || [];
 
   return (
     <div className="relative ">
@@ -38,11 +45,11 @@ function Footer() {
             {/* PHONE SECTION */}
             <div>
               <p>PHONE</p>
-              <div className="text-description text-xs">
+              <div className="text-description text-xs grid grid-flow-col auto-cols-max gap-1 items-center">
                 <span>09063678910 (Globe)</span>
-                <span> | </span>
+                <span>|</span>
                 <span>09063678910 (Smart)</span>
-                <span> | </span>
+                <span>|</span>
                 <span>0286362892 (Landline)</span>
               </div>
             </div>
@@ -54,27 +61,25 @@ function Footer() {
             </div>
           </div>
         </div>
+        {/* LINKS */}
         <div className="grid grid-cols-5 gap-y-6">
-          {}
-
-          {companyBranches.map((branch, i) => {
-            const branchLinks = navData[branch.id]?.links || [];
-
-            return (
-              <div key={i} className="grid gap-6">
-                <div className="">{branch.abbreviation}</div>
-                <ul className="grid gap-3 text-sm text-description ">
-                  {branchLinks.map((link, i) => (
-                    <li key={i} className="">
-                      <a className="hover:text-red-8" href={link.href}>
-                        {formatSubLabel(link.label)}
-                      </a>{" "}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+          {links?.map((link, i) => (
+            <div key={i} className="flex flex-col gap-6">
+              <div>{link.title}</div>
+              <ul className="grid gap-3 text-sm text-description ">
+                {link?.links.map((link, i) => (
+                  <li key={i} className="">
+                    <a
+                      className={`hover:text-red-8 ${activeTab === "main" && "uppercase"}`}
+                      href={link.href}
+                    >
+                      {formatSubLabel(link.label)}
+                    </a>{" "}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
       <div className="relative pt-20 w-full h-auto ">
