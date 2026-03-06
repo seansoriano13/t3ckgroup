@@ -64,23 +64,31 @@ function Footer() {
         </div>
         {/* LINKS */}
         <div className="grid grid-cols-5 gap-y-6">
-          {links?.map((link, i) => (
-            <div key={i} className="flex flex-col gap-6">
-              <div>{link.title}</div>
-              <ul className="grid gap-3 text-sm text-description ">
-                {link?.links.map((link, i) => (
-                  <li key={i} className="">
-                    <a
-                      className={`hover:text-red-8 ${activeTab === "main" && "uppercase"}`}
-                      href={link.href}
-                    >
-                      {formatSubLabel(link.label)}
-                    </a>{" "}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {links?.map((link, i) => {
+            const isMain = activeTab === "main";
+            return (
+              <div
+                key={i}
+                className={`flex flex-col gap-6 ${isMain && "col-span-2"}`}
+              >
+                {/* CATEGORY TITLE */}
+                <div>{link.title}</div>
+                <ul className="grid gap-3 text-sm text-description ">
+                  {link?.links.map((link, i) => (
+                    // LINK LISTS
+                    <li key={i} className="">
+                      <a
+                        className={`hover:text-red-8 ${isMain && "uppercase"}`}
+                        href={link.href}
+                      >
+                        {formatSubLabel(link.label)}
+                      </a>{" "}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -109,7 +117,7 @@ function Footer() {
           gamma={1.15}
           saturation={1.05}
           centerX={-0.78}
-          centerY={0.34}
+          centerY={0.3}
           zoom={1.55}
         />
       </div>
