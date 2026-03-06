@@ -85,9 +85,9 @@ export const navData = {
 
       t3ckTrading: {
         leftPanel: {
-          title: "GLOBAL TRADING & PROCUREMENT",
+          title: "T3CK TRADING",
           description:
-            "Strategic sourcing, supply chain management, and international trading of mission-critical equipment and materials.",
+            "Specialized distributor of professional-grade medical equipment, rescue technologies, and critical care devices for healthcare and emergency frontliners.",
         },
         rightPanel: [
           {
@@ -117,9 +117,9 @@ export const navData = {
 
       tcaCbs: {
         leftPanel: {
-          title: "FAMILY-ORIENTED ATTRACTIONS",
+          title: "TCA CONCEPT BUILDERS AND SERVICES",
           description:
-            "Inclusive, high-capacity amusement systems engineered to provide safe, engaging, and shared entertainment experiences for guests of all ages.",
+            "Heavy engineering division focused on specialized construction, theme park architecture, and complex resort infrastructure development.",
         },
         rightPanel: [
           {
@@ -140,9 +140,9 @@ export const navData = {
 
       tgEnt: {
         leftPanel: {
-          title: "COMMERCIAL SURPLUS & LIQUIDATION",
+          title: "TG ENTERPRISE",
           description:
-            "Access our extensive inventory of high-quality, overstock, and premium mall pull-out goods, providing cost-effective retail solutions without compromising on value.",
+            "Consumer-facing division managing local dealer networks and direct retail operations. Bringing professional-grade gear to the civilian market.",
         },
         rightPanel: [
           {
@@ -165,9 +165,9 @@ export const navData = {
 
       dii: {
         leftPanel: {
-          title: "TRAINING & CAPACITY BUILDING",
+          title: "DISASTER INTELLIGENCE INC.",
           description:
-            "Comprehensive disaster risk reduction and crisis management training designed to empower government and corporate resilience.",
+            "Providing high-level disaster risk management, intelligence consulting, and specialized training programs for corporate and government partners.",
         },
         rightPanel: [
           {
@@ -186,9 +186,9 @@ export const navData = {
 
       eooc: {
         leftPanel: {
-          title: "TECHNICAL INTEGRATION SERVICES",
+          title: "EVERY DAY EMERGENCY OPERATIONS CENTE",
           description:
-            "End-to-end deployment of unified command systems, including custom website design and seamless API integration for emergency hotlines.",
+            "A centralized, always-on command hub providing real-time situational awareness, rapid response coordination, and critical communications support.",
         },
         rightPanel: [
           {
