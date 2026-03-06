@@ -18,6 +18,6 @@ export const getActiveTab = (pathname) => {
     case "eooc":
       return "eooc";
     default:
-      return navDataKey;
+      return "main";
   }
 };

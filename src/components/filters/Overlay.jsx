@@ -1,4 +1,4 @@
-function Overlay({ src = "", className = "", opacity }) {
+function Overlay({ src = "", className = "", opacity, mixBlendMode }) {
   return (
     <div
       className={`absolute inset-0 pointer-events-none ${className}`}
@@ -8,7 +8,7 @@ function Overlay({ src = "", className = "", opacity }) {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         opacity: opacity || 0.05,
-        // mixBlendMode: "overlay", // optional
+        mixBlendMode: mixBlendMode, // optional
       }}
     />
   );

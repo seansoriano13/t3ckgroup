@@ -125,7 +125,12 @@ function Navbar() {
               ))}
             </ul>
             <div className="flex-center">
-              <PrimaryButton className={"py-3 text-xs"} label={"Contact Us"} />
+              <a href="/contact-us">
+                <PrimaryButton
+                  className={"py-3 text-xs"}
+                  label={"Contact Us"}
+                />
+              </a>
             </div>
           </div>
 
