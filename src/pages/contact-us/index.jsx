@@ -1,7 +1,7 @@
+import Grainient from "../../components/filters/Grainient";
 import Overlay from "../../components/filters/Overlay";
 import Noisy from "../../components/Noisy";
 import PrimaryButton from "../../components/PrimaryButton";
-import Grainient from "../../components/Grainient";
 
 function ContactUs() {
   const focusStyle = "focus:outline-none focus:border-b-gray-10";
@@ -49,7 +49,7 @@ function ContactUs() {
           </h1>
 
           {/* INPUTS */}
-          <div className="justify-self-center grid gap-6 top-30 px-8 py-10 backdrop-blur-xs bg-gray-a1 w-166.25 border border-gray-a6">
+          <div className="justify-self-center grid gap-6 top-30 px-8 py-10 drop-shadow-2xl backdrop-blur-xs bg-gray-a1 w-166.25 border border-gray-a6">
             <div className="grid gap-1">
               <h2 className="text-2xl">Partner With Us</h2>
 

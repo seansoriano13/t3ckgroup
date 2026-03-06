@@ -1,10 +1,10 @@
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
-import Overlay from "../components/filters/Overlay";
 
 import { getActiveTab } from "../utils/getActiveTab.js";
 import { useLocation } from "react-router";
 import { footerData } from "../data/footer/footerData.js";
+import Grainient from "./filters/Grainient.jsx";
 
 function Footer() {
   const formatSubLabel = (label) =>
@@ -17,8 +17,7 @@ function Footer() {
 
   return (
     <div className="relative ">
-      <Overlay className="z-0" opacity={0.1} src="/overlay/footer.jpg" />
-      <div className="wrapper relative py-8 px-16 grid gap-12 grid-cols-[35%_65%]">
+      <div className="wrapper relative py-8 px-16 grid gap-12 grid-cols-[35%_65%] z-10">
         <div className="grid gap-4">
           <img src="/main-logo-w-text.png" alt="" />
           <p className="text-description text-xs">
@@ -82,8 +81,35 @@ function Footer() {
           ))}
         </div>
       </div>
-      <div className="relative pt-20 w-full h-auto ">
+
+      <div className="relative pt-20 w-full h-auto z-10 opacity-30">
         <img className="w-full object-cover" src="/footer-logo.png" alt="" />
+      </div>
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Grainient
+          color1="#000000"
+          color2="#000000"
+          color3="#ff8040"
+          timeSpeed={0.2}
+          colorBalance={-0.22}
+          warpStrength={0}
+          warpFrequency={0}
+          warpSpeed={0}
+          warpAmplitude={5}
+          blendAngle={-180}
+          blendSoftness={0.46}
+          rotationAmount={0}
+          noiseScale={2}
+          grainAmount={0.1}
+          grainScale={2}
+          grainAnimated={false}
+          contrast={1.15}
+          gamma={1.15}
+          saturation={1.05}
+          centerX={-0.78}
+          centerY={0.34}
+          zoom={1.55}
+        />
       </div>
     </div>
   );
