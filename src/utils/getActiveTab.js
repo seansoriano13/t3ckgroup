@@ -19,6 +19,8 @@ export const getActiveTab = (pathname) => {
       return "eooc";
     case "contact-us":
       return "contactUs";
+    case "request-a-quote":
+      return "requestAQuote";
     default:
       return "main";
   }

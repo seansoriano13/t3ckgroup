@@ -17,7 +17,9 @@ function GetInTouch() {
           rescue infrastructure.
         </p>
 
-        <PrimaryButton className={"z-30 px-10"} label={"CONTACT T3CK"} />
+        <a href="/contact-us">
+          <PrimaryButton className={"z-30 px-10"} label={"CONTACT T3CK"} />
+        </a>
       </div>
       <div className="w-full relative opacity-80">
         <img className="h-full w-auto" src="/contact.png" alt="" />

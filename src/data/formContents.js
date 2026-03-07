@@ -225,6 +225,7 @@ export const formContents = {
             gridSpan: 1,
             textArea: false,
             fileUpload: false,
+            select: true,
           },
           {
             name: "projectDetails",
@@ -239,7 +240,7 @@ export const formContents = {
           {
             name: "supportingDocuments",
             type: "file",
-            placeholder: "Upload RFQ, Specs, or Bidding Documents",
+            placeholder: "Attach RFP / Technical Specifications",
             required: false,
             options: [],
             gridSpan: 2,
