@@ -4,7 +4,9 @@ import HeroSection from "../components/HeroSection";
 import MissionPartners from "../components/MissionPartners";
 import OurCompany from "../components/OurCompany";
 import StrategicAcquisitions from "../components/StrategicAcquisitions";
+
 import { useRef } from "react";
+import MissionAndVision from "../components/MissionAndVision";
 
 export default function Home() {
   const ourCompanyRef = useRef(null);
@@ -15,6 +17,7 @@ export default function Home() {
       <MissionPartners />
       <StrategicAcquisitions />
       <OurCompany forwardRef={ourCompanyRef} />
+      <MissionAndVision />
       <FieldOperations />
       <GetInTouch />
     </>
