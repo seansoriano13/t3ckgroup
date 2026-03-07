@@ -14,7 +14,7 @@ function FieldOperationsCards() {
   };
 
   return (
-    <div className="flex gap-6">
+    <div className="grid grid-cols-3 gap-6">
       {fieldOperations.map((fieldOps, i) => {
         const isSelected = selectedId === fieldOps.id;
         return (
@@ -22,11 +22,11 @@ function FieldOperationsCards() {
             key={i}
             onMouseEnter={() => handleMouseEnter(fieldOps.id)}
             onMouseLeave={handleMouseLeave}
-            className={`bg-gray-4 border-b-3  ${isSelected ? "border-red-6 " : "border-gray-a6 "} transition-all`}
+            className={`bg-transparent border border-gray-6  ${isSelected ? "border-b-red-6 " : "border-b-gray-a6 "} transition-all`}
           >
             <div className="relative transition-colors bg-gray-1">
               <img
-                className={` transition-opacity h-80 w-full ${isSelected ? "opacity-40" : "opacity-80"} object-cover`}
+                className={` transition-opacity h-80 w-full ${isSelected ? "opacity-40" : "opacity-60"} object-cover`}
                 src={fieldOps.image}
                 alt=""
               />
