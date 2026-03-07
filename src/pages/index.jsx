@@ -4,14 +4,17 @@ import HeroSection from "../components/HeroSection";
 import MissionPartners from "../components/MissionPartners";
 import OurCompany from "../components/OurCompany";
 import StrategicAcquisitions from "../components/StrategicAcquisitions";
+import { useRef } from "react";
 
 export default function Home() {
+  const ourCompanyRef = useRef(null);
+
   return (
     <>
-      <HeroSection src="/videos/tg-main-hero.mp4" />
+      <HeroSection scrollToRef={ourCompanyRef} src="/videos/tg-main-hero.mp4" />
       <MissionPartners />
       <StrategicAcquisitions />
-      <OurCompany />
+      <OurCompany forwardRef={ourCompanyRef} />
       <FieldOperations />
       <GetInTouch />
     </>

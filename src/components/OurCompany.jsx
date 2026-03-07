@@ -2,19 +2,16 @@ import gsap from "gsap";
 import { companyBranches } from "../data/companyBranches.js";
 import TacticalText from "./filters/TacticalText.jsx";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function OurCompany() {
-  const frameRef = useRef();
-
+function OurCompany({ forwardRef }) {
   useGSAP(
     () => {
       const items = gsap.utils.toArray(".items");
       const leftImages = gsap.utils.toArray(".left-img");
-      const frame = frameRef.current;
+      const frame = forwardRef.current;
 
       gsap.set(leftImages, { opacity: 0 });
       gsap.set(items, { height: "3rem", opacity: 0.5 });
@@ -46,12 +43,12 @@ function OurCompany() {
           .to({}, { duration: 0.5 });
       });
     },
-    { scope: frameRef },
+    { scope: forwardRef },
   );
 
   return (
     <section
-      ref={frameRef}
+      ref={forwardRef}
       className="grid grid-cols-2 h-screen-nav overflow-hidden justify-center"
     >
       {/* LEFT SIDE*/}

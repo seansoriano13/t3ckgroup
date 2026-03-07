@@ -2,12 +2,28 @@ import React from "react";
 import Noisy from "./Noisy";
 import PrimaryButton from "./PrimaryButton";
 import Overlay from "./filters/Overlay";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/all";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 function HeroSection({
+  scrollToRef,
   src = "/videos/tg-main-hero.mp4",
   upperText = "GEAR YOU TRUST",
   lowerText = "WHEN IT MATTERS MOST",
 }) {
+  const scrollWithOffset = (ref, offset = 96) => {
+    const elementTop =
+      ref.current.getBoundingClientRect().top + window.pageYOffset;
+    const targetPosition = elementTop - offset;
+
+    gsap.to(window, {
+      scrollTo: targetPosition,
+      duration: 0.6, // adjust speed
+      ease: "power2.out",
+    });
+  };
   return (
     <section className="relative h-screen">
       <video
@@ -25,7 +41,7 @@ function HeroSection({
           {upperText} <br /> {lowerText}
         </h1>
 
-        <div>
+        <div onClick={() => scrollWithOffset(scrollToRef, 96)}>
           <PrimaryButton className={"py-5"} label={"EXPLORE CAPABILITIES"} />
         </div>
       </div>
