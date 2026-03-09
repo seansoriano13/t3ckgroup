@@ -1,5 +1,17 @@
 const DEFAULT_ICON = "/nav-dropdown/crosshair.svg";
 
+// NAV KEYS LIST
+/*
+
+tggtOpc - TG GLOBAL TRADE OPC
+t3ckTrading - T3CKTRADING
+tcaCbs - TCA CONCEPTS AND BUILDERS SERVICES
+tgEnt - TG ENTERPRISE
+dii - Disaster Intelligence Inc.
+eooc - Emergency
+
+*/
+
 const company = {
   leftPanel: {
     title: "CORPORATE OVERVIEW",

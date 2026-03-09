@@ -11,7 +11,7 @@ const DetailsSection = ({ title, Icon, children }) => (
   <div>
     <div className="flex-between border-b border-gray-6 pb-3">
       <div className="font-tactic text-lg">{title}</div>
-      <Icon />
+      <Icon className="w-5 h-5" />
     </div>
     {children}
   </div>

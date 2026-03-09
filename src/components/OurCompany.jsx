@@ -1,8 +1,10 @@
 import gsap from "gsap";
-import { companyBranches } from "../data/companyBranches.js";
 import TacticalText from "./filters/TacticalText.jsx";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { useLocation } from "react-router";
+import { getActiveTab } from "../utils/getActiveTab.js";
+import { accordionData } from "../data/accordionData.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +48,13 @@ function OurCompany({ forwardRef }) {
     { scope: forwardRef },
   );
 
+  // CURRENT TAB
+  const location = useLocation();
+  const pathname = location.pathname;
+  const activeTab = getActiveTab(pathname);
+
+  const companyBranches = accordionData[activeTab] || [];
+
   return (
     <section
       ref={forwardRef}
@@ -83,7 +92,7 @@ function OurCompany({ forwardRef }) {
             <div className="right flex gap-4 border-t border-gray-a6 pt-2">
               <div className="pt-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm">{branch.number}</span>
+                  <span className="text-sm">{`0${i + 1}`}</span>
                   <div className="h-1 w-1 bg-red-9"></div>
                 </div>
               </div>
