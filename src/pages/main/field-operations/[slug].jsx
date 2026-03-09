@@ -24,7 +24,6 @@ function FieldOperationDetails() {
 
   const fieldOpsData = fieldOperations.find((i) => i.id === slug);
 
-  // 3. Added a safety net: Prevents the app from crashing if the URL slug is wrong
   if (!fieldOpsData) {
     return (
       <div className="wrapper py-30 text-center">Operation not found.</div>
@@ -32,7 +31,7 @@ function FieldOperationDetails() {
   }
 
   const address = encodeURIComponent(fieldOpsData.location);
-  // 4. Fixed the broken template literal syntax so the map actually loads
+
   const src = `https://maps.google.com/maps?q=${address}&output=embed`;
 
   return (
@@ -116,7 +115,7 @@ function FieldOperationDetails() {
         {/* --- POSTER SIDEBAR --- */}
         <div className=" h-auto w-full p-8 flex flex-col gap-4">
           <DetailsSection title="POSTER" Icon={View}>
-            <div className="p-4 border border-gray-6 flex justify-center mt-3">
+            <div className="p-4 border border-gray-6 flex justify-center mt-6">
               <img
                 className="opacity-80 w-full h-auto object-contain"
                 src={fieldOpsData.image.poster}
