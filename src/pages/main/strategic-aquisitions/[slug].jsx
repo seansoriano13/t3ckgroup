@@ -4,18 +4,11 @@ import { Circle } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import SecondaryButton from "../../../components/SecondaryButton";
 import { strategicAcquisitionData } from "../../../data/strategicAcquisitionData";
+import { BreadCrumbs } from "../../../components/BreadCrumbs";
 
 function StrategicAcquisitionsDetail() {
   const location = useLocation();
-  const pathParts = location.pathname.split("/").filter(Boolean);
-
-  const breadcrumbs = pathParts.map((part) => {
-    const label = part
-      .replace(/-/g, " ")
-      .replace(/\b\w/g, (c) => c.toUpperCase());
-    return { label };
-  });
-
+  const breadcrumbs = BreadCrumbs(location.pathname);
   const { slug } = useParams();
 
   const companyData = strategicAcquisitionData.find((i) => i.id === slug);
@@ -35,11 +28,7 @@ function StrategicAcquisitionsDetail() {
           <div className="grid gap-4">
             <div>
               {/* BREADCRUMBS */}
-              {breadcrumbs.map(({ label }, i) => (
-                <span className=" text-gray-6 text-sm " key={i}>
-                  {i > 0 && " / "} {label}
-                </span>
-              ))}
+              {breadcrumbs}
             </div>
             {/* TITLE */}
             <h1 className="uppercase text-3xl">STRATEGIC PARTNER: {company}</h1>

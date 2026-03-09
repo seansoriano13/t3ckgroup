@@ -213,6 +213,7 @@ const main = {
 export const navData = {
   main: main,
   contactUs: main,
+  requestAQuote: main,
   tggtOpc: {
     cta: "REQUEST A QUOTE",
     links: [

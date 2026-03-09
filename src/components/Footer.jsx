@@ -16,7 +16,7 @@ function Footer() {
   const { links } = footerData[activeTab] || [];
 
   return (
-    <div className="relative ">
+    <div className="relative">
       <div className="wrapper relative py-8 px-16 grid gap-12 grid-cols-[35%_65%] z-10">
         <div className="grid gap-4">
           <img src="/main-logo-w-text.png" alt="" />
@@ -97,11 +97,11 @@ function Footer() {
       </div>
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Grainient
-          color1="#000000"
-          color2="#000000"
+          color1="#030508"
+          color2="#030508"
           color3="#ff8040"
           timeSpeed={0.2}
-          colorBalance={-0.22}
+          colorBalance={-0.32}
           warpStrength={0}
           warpFrequency={0}
           warpSpeed={0}

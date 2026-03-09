@@ -240,7 +240,7 @@ export const formContents = {
           {
             name: "supportingDocuments",
             type: "file",
-            placeholder: "Attach RFP / Technical Specifications",
+            placeholder: "Attach RFP / Technical Specifications (PDF)" ,
             required: false,
             options: [],
             gridSpan: 2,

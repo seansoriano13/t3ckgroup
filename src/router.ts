@@ -9,6 +9,7 @@ export type Path =
   | `/dii`
   | `/eooc`
   | `/main`
+  | `/main/field-operations/:slug`
   | `/main/strategic-aquisitions/:slug`
   | `/request-a-quote`
   | `/t3cktrading`
@@ -17,6 +18,7 @@ export type Path =
   | `/tggt-opc`
 
 export type Params = {
+  '/main/field-operations/:slug': { slug: string }
   '/main/strategic-aquisitions/:slug': { slug: string }
 }
 

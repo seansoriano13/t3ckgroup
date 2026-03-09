@@ -15,6 +15,7 @@ function CustomFileInput({ field }) {
         type="file"
         id={field.name}
         className="hidden"
+        accept="application/pdf"
         onChange={(e) => setFile(e.target.files[0])}
       />
 
@@ -52,7 +53,7 @@ export const Form = ({
       {backgroundText}
     </h1>
 
-  {/* INPUTS */}
+    {/* INPUTS */}
     <div className="justify-self-center grid gap-8 px-8 py-10 drop-shadow-2xl backdrop-blur-xs bg-gray-a1 w-166.25 border border-gray-a6">
       <div className="grid gap-1">
         <h2 className="text-2xl">{formTitle}</h2>
