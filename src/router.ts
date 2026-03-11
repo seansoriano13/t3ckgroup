@@ -7,7 +7,7 @@ export type Path =
   | `/`
   | `/contact-us`
   | `/dii`
-  | `/eooc`
+  | `/eeoc`
   | `/main`
   | `/main/field-operations/:slug`
   | `/main/strategic-aquisitions/:slug`

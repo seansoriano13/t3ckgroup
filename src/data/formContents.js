@@ -87,7 +87,7 @@ export const formContents = {
   },
   requestAQuote: {
     submitLabel: "REQUEST A QUOTE",
-    backgroundText: "INQUIRY & QUOTAION",
+    backgroundText: "INQUIRY & QUOTATION",
     formTitle: "Procurement Inquiry & Quotation",
     formDescription:
       "Please provide detailed specifications to ensure accurate logistical and financial assessment. A dedicated account manager from the selected division will contact you within 24 business hours.",
@@ -240,7 +240,7 @@ export const formContents = {
           {
             name: "supportingDocuments",
             type: "file",
-            placeholder: "Attach RFP / Technical Specifications (PDF)" ,
+            placeholder: "Attach RFP / Technical Specifications (PDF)",
             required: false,
             options: [],
             gridSpan: 2,

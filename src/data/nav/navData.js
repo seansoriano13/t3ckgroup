@@ -59,9 +59,9 @@ const main = {
       menuKey: "dii",
     },
     {
-      label: "EOOC",
-      href: "/eooc",
-      menuKey: "eooc",
+      label: "EEOC",
+      href: "/eeoc",
+      menuKey: "eeoc",
     },
   ],
   megaMenu: {

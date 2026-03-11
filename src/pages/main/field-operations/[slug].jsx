@@ -65,11 +65,11 @@ function FieldOperationDetails() {
             <DetailsSection title="WHEN" Icon={Clock7}>
               <div className="grid gap-2 py-3">
                 <div className="flex-between">
-                  <div className="text-sm">START</div>
+                  <div className="text-sm text-description">START</div>
                   <span>{formatDateTime(fieldOpsData.startDate)}</span>
                 </div>
                 <div className="flex-between">
-                  <div className="text-sm">END</div>
+                  <div className="text-sm text-description">END</div>
                   <span>{formatDateTime(fieldOpsData.endDate)}</span>
                 </div>
               </div>

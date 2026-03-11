@@ -52,8 +52,7 @@ function OurCompany({ forwardRef }) {
   const location = useLocation();
   const pathname = location.pathname;
   const activeTab = getActiveTab(pathname);
-
-  const companyBranches = accordionData[activeTab] || [];
+  const companyBranch = accordionData[activeTab] || [];
 
   return (
     <section
@@ -62,7 +61,7 @@ function OurCompany({ forwardRef }) {
     >
       {/* LEFT SIDE*/}
       <div className="relative h-screen-nav overflow-hidden">
-        {companyBranches.map((branch, i) => (
+        {companyBranch.map((branch, i) => (
           <div
             key={branch.id}
             className={`left-img absolute inset-0 transition-opacity duration-500 
@@ -86,7 +85,7 @@ function OurCompany({ forwardRef }) {
 
       {/* RIGHT */}
       <ol className="h-screen-nav px-8 py-8 flex flex-col gap-4 ">
-        {companyBranches.map((branch, i) => (
+        {companyBranch.map((branch, i) => (
           <li key={i} className="items flex h-12 overflow-hidden">
             {/* first:h-auto */}
             <div className="right flex gap-4 border-t border-gray-a6 pt-2">
