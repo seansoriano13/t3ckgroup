@@ -16,7 +16,7 @@ import diiMain from "../assets/our-company/main/dii.png";
 import eoocContent from "../assets/our-company/content/eooc.png";
 import eoocMain from "../assets/our-company/main/eooc.png";
 
-export const accordionData = {
+export constaccordionData = {
   main: [
     {
       id: "tggt-opc",
