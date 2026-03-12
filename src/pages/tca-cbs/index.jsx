@@ -1,13 +1,19 @@
+import { useRef } from "react";
+import Accordion from "../../components/Accordion";
 import HeroSection from "../../components/HeroSection";
 
-function index() {
+function TcaCbs() {
+  const accordionRef = useRef(null);
   return (
-    <HeroSection
-      upperText="BUILDING EXPERIENCES"
-      lowerText="ENGINEERED TO LAST"
-      src="/videos/tca-cbs-hero.mp4"
-    />
+    <>
+      <HeroSection
+        upperText="BUILDING EXPERIENCES"
+        lowerText="ENGINEERED TO LAST"
+        src="/videos/tca-cbs-hero.mp4"
+      />
+      <Accordion forwardRef={accordionRef} />
+    </>
   );
 }
 
-export default index;
+export default TcaCbs;
