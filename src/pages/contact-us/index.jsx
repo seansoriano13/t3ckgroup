@@ -1,6 +1,5 @@
 import { useLocation } from "react-router";
 import Grainient from "../../components/filters/Grainient";
-import PrimaryButton from "../../components/PrimaryButton";
 import { getActiveTab } from "../../utils/getActiveTab";
 import { formContents } from "../../data/formContents";
 import { Form } from "../../components/Form";

@@ -8,7 +8,7 @@ export const productSpotlightData = {
     ctaLabel: "EXPLORE MORE",
     ctaLink: "/tg-global/products/guardian-angel",
 
-    // The right-side interactive panel
+
     features: {
       title: "Operational Mounting",
       options: [

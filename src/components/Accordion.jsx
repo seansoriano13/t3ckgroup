@@ -8,7 +8,7 @@ import { accordionData } from "../data/accordionData.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function OurCompany({ forwardRef }) {
+function Accordion({ forwardRef }) {
   useGSAP(
     () => {
       const items = gsap.utils.toArray(".items");
@@ -109,4 +109,4 @@ function OurCompany({ forwardRef }) {
   );
 }
 
-export default OurCompany;
+export default Accordion;
