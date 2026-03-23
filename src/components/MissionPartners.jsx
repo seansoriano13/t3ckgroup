@@ -28,7 +28,7 @@ function MissionPartners() {
   return (
     <section className="overflow-hidden">
       <div className="wrapper p-6">
-        <h3 className="text-gray-a6">Mission Partners</h3>
+        <h3 className="text-gray-a6">Our Partners</h3>
       </div>
       <div className=" w-full bg-background border border-r-0 border-l-0 border-gray-a6">
         <div

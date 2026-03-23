@@ -25,7 +25,7 @@ function StrategicAcquisitions() {
   return (
     <section className="w-full h-full relative py-12">
       <div className="wrapper grid gap-6">
-        <h2 className=" text-center text-4xl">STRATEGIC ACQUISITIONS</h2>
+        <h2 className=" text-center text-4xl">STRATEGIC PARTNERSHIPS</h2>
         <div className=" grid grid-cols-4 border border-gray-a6 ">
           {strategicAcquisitionData.map((acquisition, i) => (
             <StrategicAcquisitionsCard

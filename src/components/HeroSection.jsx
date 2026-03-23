@@ -31,7 +31,7 @@ function HeroSection({
         muted
         playsInline
         loop
-        className="w-full h-screen object-cover opacity-30 "
+        className="w-full h-screen object-cover opacity-40 "
       >
         <source src={src} type="video/mp4" />
       </video>
@@ -45,7 +45,7 @@ function HeroSection({
           <PrimaryButton className={"py-5"} label={"EXPLORE CAPABILITIES"} />
         </div>
       </div>
-      <Overlay className="z-0" opacity={0.2} src="/overlay/noisy.png" />
+      <Overlay className="z-0" opacity={0.4} src="/overlay/noisy.png" />
     </section>
   );
 }

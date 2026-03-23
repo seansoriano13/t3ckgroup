@@ -10,7 +10,7 @@ function MissionAndVision() {
         <div className="grid grid-cols-2">
           <div className="p-12 grid gap-2 relative">
             <h3 className="text-2xl  z-10">OUR MISSION</h3>
-            <p className="text-xs text-description  z-10">
+            <p className="text-xs text-gray-11  z-10">
               To Provide high-quality equipment for sport climbing,
               work-at-height, and rescue professionals, including personal
               protective equipment (PPE), advanced rescue systems, and support
@@ -67,7 +67,7 @@ function MissionAndVision() {
               />
             </div>
             <h3 className="text-2xl  z-10">OUR VISION</h3>
-            <p className="text-xs text-description  z-10">
+            <p className="text-xs text-gray-11  z-10">
               to be recognized as a leading distributor of technical gear, sport
               climbing equipment, PPE, and rescue systems, commited to
               exceptional service in an environment that nurtures innovation,

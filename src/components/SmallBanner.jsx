@@ -23,7 +23,7 @@ function SmallBanner({ className = "" }) {
         className="flex-center gap-1 text-xs hover:text-red-9 transition-colors"
       >
         <Phone className="ml-3 text-red-8" size={16} />
-        <span>+63 9063678910 (Smart)</span>
+        <span>+63 9202888333 (Smart)</span>
       </a>
 
       {/* Landline */}
