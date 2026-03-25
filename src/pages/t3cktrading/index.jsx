@@ -1,19 +1,25 @@
 import { useRef } from "react";
-import HeroSection from "../../components/HeroSection";
 import Accordion from "../../components/Accordion";
+import HeroSection from "../../components/HeroSection";
+import ProductSpotlight from "../../components/ProductSpotlight";
+import GetInTouch from "../../components/GetInTouch";
+import { productSpotlightData } from "../../data/productSpotlightData";
 
-function T3cktrading() {
+function T3ckTrading() {
   const accordionRef = useRef(null);
   return (
     <>
       <HeroSection
-        upperText="MISSION CRITICAL SUPPLY"
-        lowerText="DRIVING LOCAL PROGRESS"
-        src={"/videos/t3cktrading-hero.mp4"}
+        scrollToRef={accordionRef}
+        upperText="HEAVY LIFTING"
+        lowerText="INFRASTRUCTURE"
+        src={""}
       />
+      <ProductSpotlight data={productSpotlightData.t3ckTrading} />
       <Accordion forwardRef={accordionRef} />
+      <GetInTouch />
     </>
   );
 }
 
-export default T3cktrading;
+export default T3ckTrading;
