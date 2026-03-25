@@ -121,7 +121,7 @@ function Navbar() {
   return (
     <>
       <nav ref={navRef} className="z-100 fixed w-full top-0 transition-colors">
-        <SmallBanner className="banner" />
+        <SmallBanner className="banner hidden md:flex flex-wrap items-center justify-center lg:justify-end bg-red-1" />
         <div onMouseLeave={handleMouseLeave} className="w-full relative">
           <div className="wrapper py-2 flex justify-between items-center">
             <Link className="hover:scale-110 transition-all" to="/">
@@ -146,7 +146,7 @@ function Navbar() {
                     {navLink.label}
                     {navLinkBorder()}
                   </Link>
-                  {i === 3 && (
+                  {(i === 3 && activeTab === 'main') && (
                     <div className="w-px h-6 ml-2 bg-gray-12 opacity-40"></div>
                   )}
                 </li>
