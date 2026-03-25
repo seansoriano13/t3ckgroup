@@ -40,4 +40,70 @@ export const productSpotlightData = {
       ],
     },
   },
+  t3ckTrading: {
+    category: "HEAVY ELEVATION SYSTEMS",
+    title: "TITAN SERIES 50-TON CRANE",
+    description:
+      "The Titan Series represents the pinnacle of mobile elevation. Engineered for rapid deployment in rugged environments, offering uncompromised lifting power and precision hydraulics for mission-critical infrastructure builds and disaster response.",
+    mainProductImage: "https://placehold.co/800x600/1a1a1a/ffffff?text=TITAN+50-TON+CRANE", 
+    ctaLabel: "EXPLORE MORE",
+    ctaLink: "/t3cktrading/elevation/cranes",
+
+    features: {
+      title: "Engineered Capabilities",
+      options: [
+        {
+          id: "01",
+          label: "HYDRAULIC MAST",
+          description: "Telescopic boom with 50m reach and reinforced stabilizers.",
+          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=HYDRAULIC+MAST", 
+        },
+        {
+          id: "02",
+          label: "TERRAIN TREADS",
+          description: "Enhanced weight distribution and lateral stability on uneven ground.",
+          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=TERRAIN+TREADS",
+        },
+        {
+          id: "03",
+          label: "SMART DRIVETRAIN",
+          description: "AI-assisted torque adjustment and counterweight balancing.",
+          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=SMART+DRIVETRAIN",
+        },
+      ],
+    },
+  },
+  tgEnt: {
+    category: "ESSENTIAL EXPEDITION GEAR",
+    title: "SHADOW-STRIKE TACTICAL PACK",
+    description:
+      "Military-grade durability designed for civilian everyday carry. Featuring aerospace-grade ballistic nylon, modular MOLLE webbing, and an active climate-control mesh for unparalleled endurance during remote operations.",
+    mainProductImage: "https://placehold.co/800x600/1a1a1a/ffffff?text=SHADOW-STRIKE+PACK", 
+    ctaLabel: "BUY ON SHOPEE",
+    ctaLink: "/tg-ent/surplus",
+
+    features: {
+      title: "Pack Architecture",
+      options: [
+        {
+          id: "01",
+          label: "BALLISTIC NYLON",
+          description: "Waterproof and tear-resistant aerospace-grade weave.",
+          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=BALLISTIC+NYLON", 
+        },
+        {
+          id: "02",
+          label: "MOLLE WEBBING",
+          description: "Modular attachment system for infinite loadout customization.",
+          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=MOLLE+WEBBING",
+        },
+        {
+          id: "03",
+          label: "CLIMATE MESH",
+          description: "Advanced airflow back-panel prevents thermal buildup.",
+          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=CLIMATE+MESH",
+        },
+      ],
+    },
+  },
 };
