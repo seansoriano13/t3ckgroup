@@ -4,9 +4,19 @@ import { ArrowDown } from "lucide-react";
 import { Search } from "lucide-react";
 import PrimaryButton from "../../../../components/PrimaryButton";
 import { Plus } from "lucide-react";
+import { useState } from "react";
 
 function CommandCenters() {
   const navHeight = useNavbarHeight();
+  const [openFilters, setOpenFilters] = useState({
+    mission: true,
+    equipments: true,
+    others: false,
+  });
+
+  const toggleFilter = (key) => {
+    setOpenFilters((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
 
   return (
     <>
@@ -24,110 +34,117 @@ function CommandCenters() {
       </div>
       <div className="wrapper flex gap-8 py-12">
         {/* FILTER, MAKE IT COMPONENT AND DYNAMIC AND APPLY DROPDOWN FUNCTION*/}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 mt-10 w-64 shrink-0">
           <div>
-            <div className="flex-between pt-2 border-t border-gray-6 cursor-pointer">
-              <div>MISSION</div>
-              <ArrowUp size={15} />
+            <div onClick={() => toggleFilter('mission')} className="flex-between pt-2 border-t border-gray-6 cursor-pointer hover:text-white transition-colors">
+              <div className="font-bold text-sm tracking-widest">MISSION</div>
+              {openFilters.mission ? <ArrowUp size={15} /> : <ArrowDown size={15} />}
             </div>
-            <ul className="flex flex-col gap-2 pt-2">
-              <li className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="cssr"
-                  className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white"
-                />
-                <label htmlFor="cssr" className="cursor-pointer">
-                  CSSR ELSAR
-                </label>
-              </li>
-              <li className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="road"
-                  className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white"
-                />
-                <label htmlFor="road" className="cursor-pointer">
-                  ROAD RESCUE
-                </label>
-              </li>
-              <li className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="wasar"
-                  className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white"
-                />
-                <label htmlFor="wasar" className="cursor-pointer">
-                  WASAR RESCUE
-                </label>
-              </li>
-              <li className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="wilderness"
-                  className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white"
-                />
-                <label htmlFor="wilderness" className="cursor-pointer">
-                  WILDERNESS RESCUE
-                </label>
-              </li>
-            </ul>
+            {openFilters.mission && (
+              <ul className="flex flex-col gap-2 pt-4 pb-2">
+                <li className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    id="cssr"
+                    className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white cursor-pointer"
+                  />
+                  <label htmlFor="cssr" className="cursor-pointer text-sm text-gray-11 hover:text-white transition-colors">
+                    CSSR ELSAR
+                  </label>
+                </li>
+                <li className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    id="road"
+                    className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white cursor-pointer"
+                  />
+                  <label htmlFor="road" className="cursor-pointer text-sm text-gray-11 hover:text-white transition-colors">
+                    ROAD RESCUE
+                  </label>
+                </li>
+                <li className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    id="wasar"
+                    className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white cursor-pointer"
+                  />
+                  <label htmlFor="wasar" className="cursor-pointer text-sm text-gray-11 hover:text-white transition-colors">
+                    WASAR RESCUE
+                  </label>
+                </li>
+                <li className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    id="wilderness"
+                    className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white cursor-pointer"
+                  />
+                  <label htmlFor="wilderness" className="cursor-pointer text-sm text-gray-11 hover:text-white transition-colors">
+                    WILDERNESS RESCUE
+                  </label>
+                </li>
+              </ul>
+            )}
           </div>
 
           <div>
-            <div className="flex-between pt-2 border-t border-gray-6 cursor-pointer">
-              <div>EQUIPMENTS</div>
-              <ArrowUp size={15} />
+            <div onClick={() => toggleFilter('equipments')} className="flex-between pt-2 border-t border-gray-6 cursor-pointer hover:text-white transition-colors">
+              <div className="font-bold text-sm tracking-widest">EQUIPMENTS</div>
+              {openFilters.equipments ? <ArrowUp size={15} /> : <ArrowDown size={15} />}
             </div>
-            <ul className="flex flex-col gap-2 pt-2">
-              <li className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="extrication"
-                  className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white"
-                />
-                <label htmlFor="extrication" className="cursor-pointer">
-                  EXTRICATION TOOLS
-                </label>
-              </li>
-              <li className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="shoring"
-                  className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white"
-                />
-                <label htmlFor="shoring" className="cursor-pointer">
-                  SHORING STABILIZER
-                </label>
-              </li>
-              <li className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="wasar-equip"
-                  className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white"
-                />
-                <label htmlFor="wasar-equip" className="cursor-pointer">
-                  WASAR RESCUE
-                </label>
-              </li>
-              <li className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="lifting"
-                  className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white"
-                />
-                <label htmlFor="lifting" className="cursor-pointer">
-                  LIFTING BAG
-                </label>
-              </li>
-            </ul>
+            {openFilters.equipments && (
+              <ul className="flex flex-col gap-2 pt-4 pb-2">
+                <li className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    id="extrication"
+                    className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white cursor-pointer"
+                  />
+                  <label htmlFor="extrication" className="cursor-pointer text-sm text-gray-11 hover:text-white transition-colors">
+                    EXTRICATION TOOLS
+                  </label>
+                </li>
+                <li className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    id="shoring"
+                    className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white cursor-pointer"
+                  />
+                  <label htmlFor="shoring" className="cursor-pointer text-sm text-gray-11 hover:text-white transition-colors">
+                    SHORING STABILIZER
+                  </label>
+                </li>
+                <li className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    id="wasar-equip"
+                    className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white cursor-pointer"
+                  />
+                  <label htmlFor="wasar-equip" className="cursor-pointer text-sm text-gray-11 hover:text-white transition-colors">
+                    WASAR RESCUE
+                  </label>
+                </li>
+                <li className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    id="lifting"
+                    className="peer w-4 h-4 bg-gray-1 border border-gray-6 rounded checked:bg-gray-1 checked:border-gray-6 accent-white cursor-pointer"
+                  />
+                  <label htmlFor="lifting" className="cursor-pointer text-sm text-gray-11 hover:text-white transition-colors">
+                    LIFTING BAG
+                  </label>
+                </li>
+              </ul>
+            )}
           </div>
 
           <div>
-            <div className="flex-between pt-2 border-t border-gray-6 cursor-pointer">
-              <div>OTHERS</div>
-              <ArrowDown size={15} />
+            <div onClick={() => toggleFilter('others')} className="flex-between pt-2 border-t border-gray-6 cursor-pointer hover:text-white transition-colors">
+              <div className="font-bold text-sm tracking-widest">OTHERS</div>
+              {openFilters.others ? <ArrowUp size={15} /> : <ArrowDown size={15} />}
             </div>
+            {openFilters.others && (
+              <div className="pt-4 pb-2 text-xs text-gray-8">No other filters available.</div>
+            )}
           </div>
         </div>
         {/* RIGHT SIDE */}
@@ -136,7 +153,7 @@ function CommandCenters() {
             <input
               className="text-gray-10 border-b border-gray-6 py-2 outline-none focus:border-gray-10 transition-colors"
               type="text"
-              name=""
+              name=""   
               id=""
               placeholder="Search"
             />
