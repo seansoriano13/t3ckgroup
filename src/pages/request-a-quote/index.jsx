@@ -3,6 +3,7 @@ import { formContents } from "../../data/formContents";
 import { getActiveTab } from "../../utils/getActiveTab";
 import Grainient from "../../components/filters/Grainient";
 import { Form } from "../../components/Form";
+import { useEffect } from "react";
 
 function RequestAQuote() {
   const location = useLocation();
@@ -15,6 +16,10 @@ function RequestAQuote() {
   const submitLabel = formContentData.submitLabel;
   const formDescription = formContentData.formDescription;
   const { sections = [] } = formContentData;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <>
