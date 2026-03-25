@@ -3,6 +3,7 @@ import Accordion from "../../components/Accordion";
 import HeroSection from "../../components/HeroSection";
 import ProductSpotlight from "../../components/ProductSpotlight";
 import GetInTouch from "../../components/GetInTouch";
+import { productSpotlightData } from "../../data/productSpotlightData";
 
 function TggtOpc() {
   const accordionRef = useRef(null);
@@ -14,7 +15,7 @@ function TggtOpc() {
         lowerText="ON A GLOBAL SCALE"
         src={"/videos/tggt-opc-hero.mp4"}
       />
-      <ProductSpotlight />
+      <ProductSpotlight data={productSpotlightData.tggtOpc} />
       <Accordion forwardRef={accordionRef} />
       <GetInTouch />
     </>
