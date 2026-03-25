@@ -16,6 +16,7 @@ export type Path =
   | `/tca-cbs`
   | `/tg-ent`
   | `/tggt-opc`
+  | `/tggt-opc/response/command-centers`
 
 export type Params = {
   '/main/field-operations/:slug': { slug: string }
