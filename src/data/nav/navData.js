@@ -24,7 +24,7 @@ const company = {
       links: [
         { label: "Our Company", href: "/about" },
         { label: "Field Operations", href: "/operations" },
-        { label: "Get In Touch", href: "/tg-global/contact" },
+        { label: "Get In Touch", href: "/tggt-opc/contact" },
       ],
     },
   ],
@@ -76,19 +76,40 @@ const main = {
           icon: DEFAULT_ICON,
           title: "CRISIS RESPONSE & RESCUE",
           links: [
-            { label: "Emergency Medical Equipment" },
-            { label: "Fire Fighting Equipment" },
-            { label: "USAR - Search and Rescue" },
-            { label: "Emergency Operations Center" },
+            {
+              label: "Emergency Medical Equipment",
+              href: "/tggt-opc/response/medical",
+            },
+            {
+              label: "Fire Fighting Equipment",
+              href: "/tggt-opc/response/fire",
+            },
+            {
+              label: "USAR - Search and Rescue",
+              href: "/tggt-opc/response/usar",
+            },
+            {
+              label: "Emergency Operations Center",
+              href: "/tggt-opc/response/command-centers",
+            },
           ],
         },
         {
           icon: "/nav-dropdown/gear.svg",
           title: "SPECIALIZED AREAS",
           links: [
-            { label: "Outdoor & Expedition" },
-            { label: "Recreation & Leisure" },
-            { label: "Enterprise Solutions" },
+            {
+              label: "Outdoor & Expedition",
+              href: "/tggt-opc/outdoor/expedition",
+            },
+            {
+              label: "Recreation & Leisure",
+              href: "/tggt-opc/recreation/resort",
+            },
+            {
+              label: "Enterprise Solutions",
+              href: "/tggt-opc/infrastructure/facilities",
+            },
           ],
         },
       ],
@@ -105,22 +126,18 @@ const main = {
           icon: "/nav-dropdown/gear.svg",
           title: "PRODUCT CATEGORIES",
           links: [
-            { label: "Tactical Gear" },
-            { label: "Heavy Equipment" },
-            { label: "Spare Parts" },
+            { label: "Tactical Gear", href: "/t3cktrading/tactical" },
+            { label: "Heavy Equipment", href: "/t3cktrading/heavy" },
+            { label: "Spare Parts", href: "/t3cktrading/parts" },
           ],
         },
         {
           icon: "/nav-dropdown/logistics.svg",
           title: "SERVICES",
           links: [
-            { label: "Bulk Procurement" },
-            {
-              label: "Logistics & Delivery",
-            },
-            {
-              label: "International Shipping",
-            },
+            { label: "Bulk Procurement", href: "/t3cktrading/procurement" },
+            { label: "Logistics & Delivery", href: "/t3cktrading/logistics" },
+            { label: "International Shipping", href: "/t3cktrading/shipping" },
           ],
         },
       ],
@@ -138,11 +155,10 @@ const main = {
           title: "ATTRACTION TYPES",
           links: [
             { label: "Classic Rides", href: "/tca-concept/family/classic" },
-            {
-              label: "Scenic Attractions",
-            },
+            { label: "Scenic Attractions", href: "/tca-concept/family/scenic" },
             {
               label: "Interactive Experiences",
+              href: "/tca-concept/family/interactive",
             },
           ],
         },
@@ -162,12 +178,15 @@ const main = {
           links: [
             {
               label: "Wholesale Apparel",
+              href: "/tg-enterprise/surplus/apparel",
             },
             {
               label: "Consumer Electronics",
+              href: "/tg-enterprise/surplus/electronics",
             },
             {
               label: "Assorted Goods",
+              href: "/tg-enterprise/surplus/assorted",
             },
           ],
         },
@@ -185,10 +204,11 @@ const main = {
           icon: DEFAULT_ICON,
           title: "PROGRAMS",
           links: [
-            { label: "Crisis Management" },
-            { label: "Public Safety Protocols" },
+            { label: "Crisis Management", href: "/dii/academy/crisis" },
+            { label: "Public Safety Protocols", href: "/dii/academy/safety" },
             {
               label: "First Responder Certifications",
+              href: "/dii/academy/certifications",
             },
           ],
         },
@@ -208,12 +228,15 @@ const main = {
           links: [
             {
               label: "Website Design & Installation",
+              href: "/eeoc/services/web",
             },
             {
               label: "Software Customization",
+              href: "/eeoc/services/software",
             },
             {
               label: "System Integrations",
+              href: "/eeoc/services/integrations",
             },
           ],
         },
@@ -269,13 +292,13 @@ export const navData = {
             links: [
               {
                 label: "Command Centers",
-                href: "/tg-global/response/command-centers",
+                href: "/tggt-opc/response/command-centers",
               },
-              { label: "Usar Operations", href: "/tg-global/response/usar" },
-              { label: "Fire Suppression", href: "/tg-global/response/fire" },
+              { label: "Usar Operations", href: "/tggt-opc/response/usar" },
+              { label: "Fire Suppression", href: "/tggt-opc/response/fire" },
               {
                 label: "Specialty Vehicles",
-                href: "/tg-global/response/vehicles",
+                href: "/tggt-opc/response/vehicles",
               },
             ],
           },
@@ -285,15 +308,15 @@ export const navData = {
             links: [
               {
                 label: "Emergency Medical Equipment",
-                href: "/tg-global/response/medical",
+                href: "/tggt-opc/response/medical",
               },
               {
                 label: "Disaster Relief (HADR)",
-                href: "/tg-global/response/hadr",
+                href: "/tggt-opc/response/hadr",
               },
               {
                 label: "Camp Management & Evacuation",
-                href: "/tg-global/response/camp",
+                href: "/tggt-opc/response/camp",
               },
             ],
           },
@@ -311,15 +334,15 @@ export const navData = {
             links: [
               {
                 label: "Ballistics & Protection",
-                href: "/tg-global/defense/ballistics",
+                href: "/tggt-opc/defense/ballistics",
               },
               {
                 label: "Law Enforcement & Armed Forces",
-                href: "/tg-global/defense/law-enforcement",
+                href: "/tggt-opc/defense/law-enforcement",
               },
               {
                 label: "Tactical Apparel",
-                href: "/tg-global/defense/apparel",
+                href: "/tggt-opc/defense/apparel",
               },
             ],
           },
@@ -328,7 +351,7 @@ export const navData = {
             links: [
               {
                 label: "Logistics Support Supplies",
-                href: "/tg-global/defense/logistics",
+                href: "/tggt-opc/defense/logistics",
               },
             ],
           },
@@ -346,11 +369,11 @@ export const navData = {
             links: [
               {
                 label: "Camping Essentials",
-                href: "/tg-global/outdoor/camping",
+                href: "/tggt-opc/outdoor/camping",
               },
               {
                 label: "Technical Apparel",
-                href: "/tg-global/outdoor/apparel",
+                href: "/tggt-opc/outdoor/apparel",
               },
             ],
           },
@@ -359,9 +382,9 @@ export const navData = {
             links: [
               {
                 label: "Expedition Gear",
-                href: "/tg-global/outdoor/expedition",
+                href: "/tggt-opc/outdoor/expedition",
               },
-              { label: "Survival Kits", href: "/tg-global/outdoor/survival" },
+              { label: "Survival Kits", href: "/tggt-opc/outdoor/survival" },
             ],
           },
         ],
@@ -378,11 +401,11 @@ export const navData = {
             links: [
               {
                 label: "Civil Works & Construction",
-                href: "/tg-global/infrastructure/civil",
+                href: "/tggt-opc/infrastructure/civil",
               },
               {
                 label: "Government Facility Build",
-                href: "/tg-global/infrastructure/facilities",
+                href: "/tggt-opc/infrastructure/facilities",
               },
             ],
           },
@@ -391,7 +414,7 @@ export const navData = {
             links: [
               {
                 label: "Renewable Energy Systems",
-                href: "/tg-global/infrastructure/energy",
+                href: "/tggt-opc/infrastructure/energy",
               },
             ],
           },
@@ -409,11 +432,11 @@ export const navData = {
             links: [
               {
                 label: "Adventure Park Solutions",
-                href: "/tg-global/recreation/parks",
+                href: "/tggt-opc/recreation/parks",
               },
               {
                 label: "Obstacle Courses",
-                href: "/tg-global/recreation/obstacle",
+                href: "/tggt-opc/recreation/obstacle",
               },
             ],
           },
@@ -422,7 +445,7 @@ export const navData = {
             links: [
               {
                 label: "Resort Development",
-                href: "/tg-global/recreation/resort",
+                href: "/tggt-opc/recreation/resort",
               },
             ],
           },

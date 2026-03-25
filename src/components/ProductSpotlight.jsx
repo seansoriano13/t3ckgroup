@@ -31,22 +31,22 @@ function ProductSpotlight() {
       </div>
 
       {/* Page content */}
-      <div className="wrapper py-30 grid gap-4 justify-center relative z-10">
-        <div className="grid grid-cols-2 gap-27">
+      <div className="wrapper py-20 lg:py-30 grid gap-4 justify-center relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-27">
           {/* LEFT */}
           <div className="grid gap-10">
-            <div className="grid gap-3">
-              <p className="text-xs text-gray-7">
+            <div className="grid gap-2">
+              <p className="text-xs text-gray-7 text-center lg:text-left">
                 {productSpotlightContents.category}
               </p>
-              <h1 className="text-6xl">{productSpotlightContents.title}</h1>
-              <p className="w-3/4 text-description text-sm">
+              <h1 className="text-3xl lg:text-4xl text-center lg:text-left">{productSpotlightContents.title}</h1>
+              <p className="w-full lg:w-3/4 text-description text-xs text-center lg:text-left mx-auto lg:mx-0">
                 {productSpotlightContents.description}
               </p>
             </div>
-            <div className="justify-self-center w-110 h-70">
+            <div className="justify-self-center w-80 h-56 mt-4">
               <img
-                className="w-full h-full object-fill"
+                className="w-full h-full object-contain"
                 src={productSpotlightContents.mainProductImage}
                 alt=""
               />
@@ -54,13 +54,13 @@ function ProductSpotlight() {
           </div>
 
           {/* RIGHT */}
-          <div className="flex flex-col gap-4">
-            <p className="text-sm text-gray-7 text-center uppercase">
+          <div className="flex flex-col gap-3 px-0 lg:px-6">
+            <p className="text-xs text-gray-7 text-center uppercase">
               {productSpotlightContents?.features.title}
             </p>
 
-            <div className="p-8 grid gap-5 border border-gray-6">
-              <div className="grid gap-4">
+            <div className="p-6 grid gap-4 border border-gray-6">
+              <div className="grid gap-3">
                 {productFeatures.map((productFeature, index) => {
                   const isActive = activeFeatureIndex === index;
 
@@ -68,12 +68,12 @@ function ProductSpotlight() {
                     <div
                       key={productFeature.id}
                       onClick={() => setActiveFeatureIndex(index)}
-                      className={`filter-[url(#noise)] py-3 px-4 flex gap-8 border-t border-l border-b-0 border-gray-6 border-r-0 cursor-pointer transition-all duration-300 ${
+                      className={`filter-[url(#noise)] py-2 px-3 flex gap-6 border-t border-l border-b-0 border-gray-6 border-r-0 cursor-pointer transition-all duration-300 ${
                         isActive && "bg-red-9"
                       }`}
                     >
-                      <span className="text-sm">{productFeature.id}</span>
-                      <span className="text-sm font-semibold tracking-wider">
+                      <span className="text-xs">{productFeature.id}</span>
+                      <span className="text-xs font-semibold tracking-wider">
                         {productFeature.label}
                       </span>
                     </div>
@@ -81,13 +81,13 @@ function ProductSpotlight() {
                 })}
               </div>
 
-              <div className="mt-4">
+              <div className="mt-3">
                 {productFeatures[activeFeatureIndex] && (
-                  <div className="grid grid-cols-2 items-center gap-6 justify-center">
-                    <p className="px-6 text-sm text-gray-400 leading-relaxed text-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 justify-center">
+                    <p className="px-4 text-xs text-gray-400 leading-relaxed text-center">
                       {productFeatures[activeFeatureIndex].description}
                     </p>
-                    <div className="w-full h-32 overflow-hidden border border-gray-800">
+                    <div className="w-full h-24 overflow-hidden border border-gray-800">
                       <img
                         className="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"
                         src={productFeatures[activeFeatureIndex].featureImage}

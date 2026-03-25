@@ -2,7 +2,7 @@
 export const getActiveTab = (pathname) => {
   if (pathname === "/") return "main";
 
-  const key = pathname.slice(1);
+  const key = pathname.split("/")[1];
 
   switch (key) {
     case "tggt-opc":

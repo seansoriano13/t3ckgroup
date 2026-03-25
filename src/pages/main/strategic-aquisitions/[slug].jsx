@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import SecondaryButton from "../../../components/SecondaryButton";
 import { strategicAcquisitionData } from "../../../data/strategicAcquisitionData";
 import { BreadCrumbs } from "../../../components/BreadCrumbs";
+import { useEffect } from "react";
 
 function StrategicAcquisitionsDetail() {
   const location = useLocation();
@@ -21,6 +22,10 @@ function StrategicAcquisitionsDetail() {
   const branchLabel = companyDetails?.branchLabel;
   const branchLink = companyDetails?.branchLink;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="min-h-screen relative pt-30 pb-13">
@@ -31,12 +36,12 @@ function StrategicAcquisitionsDetail() {
               {breadcrumbs}
             </div>
             {/* TITLE */}
-            <h1 className="uppercase text-3xl">STRATEGIC PARTNER: {company}</h1>
+            <h1 className="uppercase text-2xl lg:text-3xl text-center lg:text-left">STRATEGIC PARTNER: {company}</h1>
           </div>
           {/* CONTENT GRID 2*/}
-          <div className=" grid grid-cols-2 gap-2">
+          <div className=" grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-2">
             {/* LEFT */}
-            <div className="grid gap-6 px-10 py-8 border border-gray-6">
+            <div className="grid gap-6 px-6 lg:px-10 py-8 border border-gray-6">
               <div className="justify-self-center w-40 h-20 flex items-center justify-center overflow-hidden rounded">
                 {/* LOGO */}
                 <img
@@ -46,8 +51,8 @@ function StrategicAcquisitionsDetail() {
                 />
               </div>
               <div className="grid gap-6 text-xs text-description text-justify">
-                {description.map((description) => (
-                  <p>{description}</p>
+                {description.map((desc, idx) => (
+                  <p key={idx}>{desc}</p>
                 ))}
               </div>
               <div className="justify-self-end">
@@ -63,7 +68,7 @@ function StrategicAcquisitionsDetail() {
               </div>
             </div>
             {/* RIGHT */}
-            <div className="px-10 py-12 border border-gray-6">
+            <div className="px-4 lg:px-10 py-8 lg:py-12 border border-gray-6 min-h-[300px] lg:min-h-0">
               <iframe
                 width="100%"
                 height="100%"

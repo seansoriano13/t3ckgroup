@@ -4,6 +4,7 @@ import { fieldOperations } from "../../../data/fieldOperationsData.js";
 import { Clock7, MapPlus, Star, View } from "lucide-react"; // 1. Consolidated imports
 import { formatDateTime } from "../../../utils/formatCardDate.js";
 import PrimaryButton from "../../../components/PrimaryButton";
+import { useEffect } from "react";
 
 // 2. Extracted the repetitive Section Header to kill nesting
 // eslint-disable-next-line no-unused-vars
@@ -22,6 +23,10 @@ function FieldOperationDetails() {
   const breadCrumbs = BreadCrumbs(location.pathname);
   const { slug } = useParams();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const fieldOpsData = fieldOperations.find((i) => i.id === slug);
 
   if (!fieldOpsData) {
@@ -39,7 +44,7 @@ function FieldOperationDetails() {
       {/* --- HERO BANNER --- */}
       <div className="relative pt-30 pb-13">
         <img
-          className="pointer-events-none absolute top-0 left-0 w-full h-full object-cover opacity-30"
+          className="pointer-events-none absolute top-0 left-0 w-full h-full object-cover opacity-20"
           src={fieldOpsData.image.banner}
           alt={`${fieldOpsData.title} image`}
         />
@@ -51,14 +56,14 @@ function FieldOperationDetails() {
             <p className="text-sm text-description">{fieldOpsData.subtitle}</p>
           </div>
 
-          <div className="text-xs text-description w-1/2">
+          <div className="text-xs text-description w-full lg:w-1/2">
             {fieldOpsData.description.details}
           </div>
         </div>
       </div>
 
       {/* --- CONTENT GRID --- */}
-      <div className="wrapper relative grid grid-cols-[60%_40%]">
+      <div className="wrapper relative grid grid-cols-1 lg:grid-cols-[60%_40%]">
         <div className="grid py-8">
           <div className="grid gap-6">
             {/* WHEN */}
@@ -113,7 +118,7 @@ function FieldOperationDetails() {
         </div>
 
         {/* --- POSTER SIDEBAR --- */}
-        <div className=" h-auto w-full p-8 flex flex-col gap-4">
+        <div className=" h-auto w-full px-0 lg:p-8 flex flex-col gap-4">
           <DetailsSection title="POSTER" Icon={View}>
             <div className="p-4 border border-gray-6 flex justify-center mt-6">
               <img

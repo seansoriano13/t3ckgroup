@@ -37,7 +37,7 @@ function HeroSection({
       </video>
 
       <div className="absolute inset-0 flex flex-col gap-6 items-center justify-center z-20">
-        <h1 className="wrapper text-5xl text-center font-tactic">
+        <h1 className="wrapper text-4xl mt-30 md:mt-0 md:text-5xl text-center font-tactic">
           {upperText} <br /> {lowerText}
         </h1>
 

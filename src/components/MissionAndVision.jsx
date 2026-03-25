@@ -7,8 +7,8 @@ function MissionAndVision() {
   return (
     <div className="wrapper grid gap-6 py-22">
       <SpotlightCard className={cardStyle} spotlightColor="#b9d1fc2d">
-        <div className="grid grid-cols-2">
-          <div className="p-12 grid gap-2 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="p-8 lg:p-12 grid gap-4 lg:gap-2 relative order-2 lg:order-1">
             <h3 className="text-2xl  z-10">OUR MISSION</h3>
             <p className="text-xs text-gray-11  z-10">
               To Provide high-quality equipment for sport climbing,
@@ -32,9 +32,9 @@ function MissionAndVision() {
               />
             </div>
           </div>
-          <div className="">
+          <div className="order-1 lg:order-2">
             <img
-              className="object-top object-cover h-50 w-full opacity-80"
+              className="object-top object-cover h-64 lg:h-50 w-full opacity-80"
               src="/mission-vision/rescue.jpg"
               alt=""
             />
@@ -42,15 +42,15 @@ function MissionAndVision() {
         </div>
       </SpotlightCard>
       <SpotlightCard className={cardStyle} spotlightColor="#b9d1fc2d">
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="">
             <img
-              className="object-cover h-50 w-full opacity-80"
+              className="object-cover h-64 lg:h-50 w-full opacity-80"
               src="/mission-vision/vision.jpg"
               alt=""
             />
           </div>
-          <div className="p-12 grid gap-2 relative">
+          <div className="p-8 lg:p-12 grid gap-4 lg:gap-2 relative">
             <div className="absolute inset-0 z-0">
               <ColorBlends
                 rotation={185}

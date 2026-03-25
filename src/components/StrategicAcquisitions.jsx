@@ -1,6 +1,7 @@
 import { strategicAcquisitionData } from "../data/strategicAcquisitionData.js";
 import Overlay from "./filters/Overlay.jsx";
 import SecondaryButton from "./SecondaryButton";
+import { Link } from "react-router";
 
 function StrategicAcquisitionsCard({ logo, alt, description, link }) {
   return (
@@ -10,12 +11,12 @@ function StrategicAcquisitionsCard({ logo, alt, description, link }) {
       </div>
       <p className="text-sm text-center text-description">{description}</p>
       <div className="flex-center">
-        <a href={link || "#"}>
+        <Link to={link || "/"}>
           <SecondaryButton
             className={"py-4 px-7 text-xs"}
             label={"READ MORE"}
           />
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -25,8 +26,8 @@ function StrategicAcquisitions() {
   return (
     <section className="w-full h-full relative py-12">
       <div className="wrapper grid gap-6">
-        <h2 className=" text-center text-4xl">STRATEGIC PARTNERSHIPS</h2>
-        <div className=" grid grid-cols-4 border border-gray-a6 ">
+        <h2 className=" text-center text-3xl md:text-4xl">STRATEGIC PARTNERSHIPS</h2>
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-gray-a6 ">
           {strategicAcquisitionData.map((acquisition, i) => (
             <StrategicAcquisitionsCard
               key={i}

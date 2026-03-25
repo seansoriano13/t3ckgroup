@@ -57,10 +57,10 @@ function Accordion({ forwardRef }) {
   return (
     <section
       ref={forwardRef}
-      className="grid grid-cols-2 h-screen-nav overflow-hidden justify-center"
+      className="grid grid-cols-1 lg:grid-cols-2 h-screen-nav overflow-hidden justify-center"
     >
       {/* LEFT SIDE*/}
-      <div className="relative h-screen-nav overflow-hidden">
+      <div className="hidden lg:block relative h-screen-nav overflow-hidden">
         {companyBranch.map((branch, i) => (
           <div
             key={branch.id}
@@ -84,7 +84,7 @@ function Accordion({ forwardRef }) {
       </div>
 
       {/* RIGHT */}
-      <ol className="h-screen-nav px-8 py-8 flex flex-col gap-4 ">
+      <ol className="h-screen-nav px-4 lg:px-8 py-8 flex flex-col gap-4 overflow-y-auto">
         {companyBranch.map((branch, i) => (
           <li key={i} className="items flex h-12 overflow-hidden">
             {/* first:h-auto */}
