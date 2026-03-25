@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { navData } from "../data/nav/navData.js";
 import { ChevronDown, ChevronUp, X } from "lucide-react";
 import PrimaryButton from "./PrimaryButton.jsx";
+import SmallBanner from "./SmallBanner.jsx";
 
 const MobileMenu = ({ isOpen, onClose, activeTab }) => {
   const [openAccordions, setOpenAccordions] = useState({});
@@ -39,13 +40,28 @@ const MobileMenu = ({ isOpen, onClose, activeTab }) => {
             <div key={i} className="flex flex-col border-b border-gray-4 py-2">
               {hasMegaMenu ? (
                 <>
-                  <button 
-                    onClick={() => toggleAccordion(link.menuKey)}
-                    className="flex justify-between items-center w-full text-left text-sm uppercase font-bold text-gray-12 py-2"
-                  >
-                    {link.label}
-                    {isOpenAcc ? <ChevronUp className="w-5 h-5 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 flex-shrink-0" />}
-                  </button>
+                  <div className="flex justify-between items-center w-full py-2">
+                    {link.href ? (
+                      <Link 
+                        to={link.href} 
+                        onClick={onClose}
+                        className="text-left text-sm uppercase font-bold text-gray-12 flex-1 hover:text-white underline underline-offset-4 decoration-gray-6 hover:decoration-white transition-all"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <span className="text-left text-sm uppercase font-bold text-gray-12 flex-1">
+                        {link.label}
+                      </span>
+                    )}
+                    <button 
+                      onClick={() => toggleAccordion(link.menuKey)}
+                      className="p-2 -mr-2 text-gray-12 hover:text-red-9 transition-colors"
+                      aria-label="Toggle sub-menu"
+                    >
+                      {isOpenAcc ? <ChevronUp className="w-5 h-5 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 flex-shrink-0" />}
+                    </button>
+                  </div>
                   {isOpenAcc && (
                     <div className="flex flex-col gap-4 pl-4 pt-4 pb-2">
                        {megaMenuData[link.menuKey]?.rightPanel?.map((panel, idx) => (
@@ -81,6 +97,7 @@ const MobileMenu = ({ isOpen, onClose, activeTab }) => {
       </div>
 
       <div className="p-4 border-t border-gray-4 mt-auto">
+        <SmallBanner className="flex-col items-start gap-4 mb-6 md:hidden" />
         <Link to="/contact-us" onClick={onClose} className="block w-full">
           <PrimaryButton className={"w-full py-4 text-center justify-center"} label={"Contact Us"} />
         </Link>
