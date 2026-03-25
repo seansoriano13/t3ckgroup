@@ -5,7 +5,7 @@ import { Link } from "react-router";
 function SmallBanner({ className = "" }) {
   return (
     <div
-      className={`${className} w-full min-h-[24px] bg-red-1 text-gray-a11 relative flex flex-wrap items-center justify-center lg:justify-end gap-x-4 py-2 lg:py-0`}
+      className={`${className} w-full min-h-[24px] text-gray-a11 relative flex gap-x-4 py-2 lg:py-0`}
     >
       <div className="text-xs hidden lg:block">Reach Us: </div>
 
