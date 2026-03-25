@@ -1,20 +1,13 @@
-import { useLocation } from "react-router";
 import PrimaryButton from "./PrimaryButton";
-import { getActiveTab } from "../utils/getActiveTab";
-import { productSpotlightData } from "../data/productSpotlightData.js";
 import { useState } from "react";
 import DarkVeil from "./filters/DarkVeil.jsx";
 
-function ProductSpotlight() {
-  // CURRENT TAB
-  const location = useLocation();
-  const pathname = location.pathname;
-  const activeTab = getActiveTab(pathname);
-  const productSpotlightContents = productSpotlightData[activeTab] || {};
+function ProductSpotlight({ data }) {
+  const productSpotlightContents = data || {};
 
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
 
-  const productFeatures = productSpotlightContents?.features?.options;
+  const productFeatures = productSpotlightContents?.features?.options || [];
 
   return (
     <div className="relative min-h-screen-nav">
