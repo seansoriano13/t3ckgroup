@@ -28,21 +28,25 @@ function Accordion({ forwardRef }) {
           start: "top 96px",
           end: "+=3000",
           pin: true,
-          scrub: 1,
-          // markers: true,
+          scrub: 0.2, // Faster response time!
+          snap: {
+            snapTo: 1 / (items.length - 1), // Snaps perfectly to each section
+            duration: 0.2, // Snaps quickly
+            ease: "power2.inOut", // Rigid, mechanical easing
+          },
         },
       });
 
       items.forEach((item, i) => {
         if (i === 0) return;
 
-        tl.to(items[i - 1], { height: "3rem", opacity: 0.5, fontSize: 14 })
+        tl.to(items[i - 1], { height: "3rem", opacity: 0.5 }) // Removed fontSize
           .to(leftImages[i - 1], { opacity: 0 }, "<")
 
-          .to(item, { height: "auto", opacity: 1, fontSize: 18 }, "<")
+          .to(item, { height: "auto", opacity: 1 }, "<") // Removed fontSize
           .to(leftImages[i], { opacity: 1 }, "<")
 
-          .to({}, { duration: 0.5 });
+          .to({}, { duration: 0.5 }); // Adds slight breathing room between snaps
       });
     },
     { scope: forwardRef },
