@@ -19,13 +19,20 @@ const DetailsSection = ({ title, Icon, children }) => (
 );
 
 function FieldOperationDetails() {
+
   const location = useLocation();
   const breadCrumbs = BreadCrumbs(location.pathname);
   const { slug } = useParams();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    useEffect(() => {
+    // Short timeout allows React Router & DOM paints to finalize before forcing scroll to top
+    const timer = setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [slug]);
+
+  
 
   const fieldOpsData = fieldOperations.find((i) => i.id === slug);
 
