@@ -14,6 +14,7 @@ export type Path =
   | `/request-a-quote`
   | `/t3cktrading`
   | `/tca-cbs`
+  | `/tca-cbs/services/:slug`
   | `/tg-ent`
   | `/tggt-opc`
   | `/tggt-opc/response/command-centers`
@@ -21,6 +22,7 @@ export type Path =
 export type Params = {
   '/main/field-operations/:slug': { slug: string }
   '/main/strategic-aquisitions/:slug': { slug: string }
+  '/tca-cbs/services/:slug': { slug: string }
 }
 
 export type ModalPath = never
