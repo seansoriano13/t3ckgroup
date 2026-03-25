@@ -51,15 +51,15 @@ function StrategicAcquisitionsDetail() {
                 ))}
               </div>
               <div className="justify-self-end">
-                <a
+                <Link
                   className="text-xs flex-center text-gray-11 hover:text-red-8"
-                  href={companyLink}
+                  to={companyLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   VIEW
                   <ArrowUpRight />
-                </a>
+                </Link>
               </div>
             </div>
             {/* RIGHT */}
@@ -79,9 +79,9 @@ function StrategicAcquisitionsDetail() {
 
           {/* BUTTON */}
           <div className="justify-self-center">
-            <a href={branchLink}>
+            <Link to={branchLink}>
               <SecondaryButton label={branchLabel} />
-            </a>
+            </Link>
           </div>
         </div>
 

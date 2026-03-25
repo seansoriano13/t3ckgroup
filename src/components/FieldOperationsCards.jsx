@@ -2,6 +2,7 @@ import { useState } from "react";
 import { fieldOperations } from "../data/fieldOperationsData.js";
 import SecondaryButton from "../components/SecondaryButton";
 import { formatCardDate } from "../utils/formatCardDate.js";
+import { Link } from "react-router";
 
 function FieldOperationsCards() {
   const [selectedId, setSelectedId] = useState(null);
@@ -33,9 +34,9 @@ function FieldOperationsCards() {
               />
               {isSelected && (
                 <div className="absolute-center z-20">
-                  <a href={`/main/field-operations/${fieldOps.id}`}>
+                  <Link to={`/main/field-operations/${fieldOps.id}`}>
                     <SecondaryButton label={"VIEW"} />
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
@@ -44,11 +45,11 @@ function FieldOperationsCards() {
               <p className="text-xs text-red-8">
                 {formatCardDate(fieldOps.startDate, fieldOps.endDate)}
               </p>
-              <a href={`/main/field-operations/${fieldOps.id}`}>
+              <Link to={`/main/field-operations/${fieldOps.id}`}>
                 <p className="text-lg hover:text-red-8 hover:underline">
                   {fieldOps.title}
                 </p>
-              </a>
+              </Link>
               <p className="text-xs text-description">
                 {fieldOps.description.card}
               </p>

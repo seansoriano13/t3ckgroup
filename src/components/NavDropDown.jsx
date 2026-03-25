@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import { navData } from "../data/nav/navData.js";
+import { Link } from "react-router";
 
 const NavDropDown = forwardRef(({ activeMenu, activeTab }, ref) => {
   const navDropDownData = navData[activeTab] || {};
@@ -35,12 +36,12 @@ const NavDropDown = forwardRef(({ activeMenu, activeTab }, ref) => {
                 <ul className="flex flex-col gap-3">
                   {column.links.map((link, i) => (
                     <li key={i}>
-                      <a
-                        href={link.href}
+                      <Link
+                        to={link.href}
                         className="text-sm text-gray-12 hover:text-red-9 transition-colors block"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

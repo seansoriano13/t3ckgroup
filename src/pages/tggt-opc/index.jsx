@@ -9,6 +9,7 @@ function TggtOpc() {
   return (
     <>
       <HeroSection
+        scrollToRef={accordionRef}
         upperText="STRATEGIC CAPABILITIES"
         lowerText="ON A GLOBAL SCALE"
         src={"/videos/tggt-opc-hero.mp4"}

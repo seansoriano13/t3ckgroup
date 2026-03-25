@@ -2,7 +2,7 @@ import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
 
 import { getActiveTab } from "../utils/getActiveTab.js";
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router";
 import { footerData } from "../data/footer/footerData.js";
 import Grainient from "./filters/Grainient.jsx";
 
@@ -25,9 +25,9 @@ function Footer() {
             infrastructure solutions for national defense and local resilience.
           </p>
           <div className="flex gap-4">
-            <a href="/request-a-quote">
+            <Link to="/request-a-quote">
               <PrimaryButton className={"text-sm"} label={"REQUEST A QUOTE"} />
-            </a>
+            </Link>
             <SecondaryButton className={"text-sm"} label={"CONTACT T3CK"} />
           </div>
           <p className="text-gray-a5 text-sm">
@@ -77,12 +77,12 @@ function Footer() {
                   {link?.links.map((link, i) => (
                     // LINK LISTS
                     <li key={i} className="">
-                      <a
+                      <Link
                         className={`hover:text-red-8 ${isMain && "uppercase"}`}
-                        href={link.href}
+                        to={link.href}
                       >
                         {formatSubLabel(link.label)}
-                      </a>{" "}
+                      </Link>
                     </li>
                   ))}
                 </ul>

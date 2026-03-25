@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Overlay from "./filters/Overlay";
 import PrimaryButton from "./PrimaryButton";
 
@@ -17,9 +18,9 @@ function GetInTouch() {
           rescue infrastructure.
         </p>
 
-        <a href="/contact-us">
+        <Link to="/contact-us">
           <PrimaryButton className={"z-30 px-10"} label={"CONTACT T3CK"} />
-        </a>
+        </Link>
       </div>
       <div className="w-full relative opacity-80">
         <img className="h-full w-auto" src="/contact.png" alt="" />

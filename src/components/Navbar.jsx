@@ -9,6 +9,7 @@ import useMegaMenu from "../utils/useMegaMenu.jsx";
 import { navData } from "../data/nav/navData.js";
 import { useLocation } from "react-router";
 import { getActiveTab } from "../utils/getActiveTab.js";
+import { Link } from "react-router";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,9 +107,9 @@ function Navbar() {
         <SmallBanner className="banner" />
         <div onMouseLeave={handleMouseLeave} className="w-full relative">
           <div className="wrapper py-2 flex justify-between items-center">
-            <a className="hover:scale-110 transition-all" href="/">
+            <Link className="hover:scale-110 transition-all" to="/">
               <img className="w-14 h-auto" src="/main-logo.svg" alt="Logo" />
-            </a>
+            </Link>
 
             <ul className="flex-center gap-4 uppercase">
               {navLinks.map((navLink, i) => (
@@ -117,23 +118,23 @@ function Navbar() {
                   onMouseEnter={() => handleMouseEnter(navLink.menuKey)}
                   className="group relative list-none py-4"
                 >
-                  <a
-                    href={navLink.href}
+                  <Link
+                    to={navLink.href}
                     className="cursor-pointer relative z-10 block p-4 text-xs text-gray-12 hover:text-red-9 hover:bg-gray-a2 transition-all"
                   >
                     {navLink.label}
                     {navLinkBorder()}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
             <div className="flex-center">
-              <a href="/contact-us">
+              <Link to="/contact-us">
                 <PrimaryButton
                   className={"py-3 text-xs"}
                   label={"Contact Us"}
                 />
-              </a>
+              </Link>
             </div>
           </div>
 
