@@ -45,7 +45,7 @@ export const productSpotlightData = {
     title: "TITAN SERIES 50-TON CRANE",
     description:
       "The Titan Series represents the pinnacle of mobile elevation. Engineered for rapid deployment in rugged environments, offering uncompromised lifting power and precision hydraulics for mission-critical infrastructure builds and disaster response.",
-    mainProductImage: "https://placehold.co/800x600/1a1a1a/ffffff?text=TITAN+50-TON+CRANE", 
+    mainProductImage: "https://picsum.photos/800/600?random=101", 
     ctaLabel: "EXPLORE MORE",
     ctaLink: "/t3cktrading/elevation/cranes",
 
@@ -56,19 +56,19 @@ export const productSpotlightData = {
           id: "01",
           label: "HYDRAULIC MAST",
           description: "Telescopic boom with 50m reach and reinforced stabilizers.",
-          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=HYDRAULIC+MAST", 
+          featureImage: "https://picsum.photos/400/400?random=102", 
         },
         {
           id: "02",
           label: "TERRAIN TREADS",
           description: "Enhanced weight distribution and lateral stability on uneven ground.",
-          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=TERRAIN+TREADS",
+          featureImage: "https://picsum.photos/400/400?random=103",
         },
         {
           id: "03",
           label: "SMART DRIVETRAIN",
           description: "AI-assisted torque adjustment and counterweight balancing.",
-          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=SMART+DRIVETRAIN",
+          featureImage: "https://picsum.photos/400/400?random=104",
         },
       ],
     },
@@ -78,7 +78,7 @@ export const productSpotlightData = {
     title: "SHADOW-STRIKE TACTICAL PACK",
     description:
       "Military-grade durability designed for civilian everyday carry. Featuring aerospace-grade ballistic nylon, modular MOLLE webbing, and an active climate-control mesh for unparalleled endurance during remote operations.",
-    mainProductImage: "https://placehold.co/800x600/1a1a1a/ffffff?text=SHADOW-STRIKE+PACK", 
+    mainProductImage: "https://picsum.photos/800/600?random=105", 
     ctaLabel: "BUY ON SHOPEE",
     ctaLink: "/tg-ent/surplus",
 
@@ -89,19 +89,19 @@ export const productSpotlightData = {
           id: "01",
           label: "BALLISTIC NYLON",
           description: "Waterproof and tear-resistant aerospace-grade weave.",
-          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=BALLISTIC+NYLON", 
+          featureImage: "https://picsum.photos/400/400?random=106", 
         },
         {
           id: "02",
           label: "MOLLE WEBBING",
           description: "Modular attachment system for infinite loadout customization.",
-          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=MOLLE+WEBBING",
+          featureImage: "https://picsum.photos/400/400?random=107",
         },
         {
           id: "03",
           label: "CLIMATE MESH",
           description: "Advanced airflow back-panel prevents thermal buildup.",
-          featureImage: "https://placehold.co/400x400/1a1a1a/ffffff?text=CLIMATE+MESH",
+          featureImage: "https://picsum.photos/400/400?random=108",
         },
       ],
     },

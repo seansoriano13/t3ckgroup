@@ -1,10 +1,15 @@
-import { useState } from "react";
-import { useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router";
 
 function useMegaMenu() {
   const [activeMenu, setActiveMenu] = useState(null);
   const enterTimer = useRef(null);
   const leaveTimer = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    setActiveMenu(null);
+  }, [location]);
 
   const handleMouseEnter = (menuId) => {
     clearTimeout(leaveTimer.current);

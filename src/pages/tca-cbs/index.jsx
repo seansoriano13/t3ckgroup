@@ -13,7 +13,7 @@ function TcaCbs() {
         scrollToRef={accordionRef}
         upperText="HEAVY ENGINEERING"
         lowerText="INFRASTRUCTURE"
-        src={""}
+        src={"/videos/tca-cbs-hero.mp4"}
       />
       <ServicesSlider data={tcaServicesData} />
       <Accordion forwardRef={accordionRef} />

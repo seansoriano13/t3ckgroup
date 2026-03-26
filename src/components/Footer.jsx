@@ -13,7 +13,7 @@ function Footer() {
   const pathname = location.pathname;
   const activeTab = getActiveTab(pathname);
 
-  const { links } = footerData[activeTab] || [];
+  const { links } = footerData[activeTab] || footerData.main;
 
   return (
     <div className="relative overflow-hidden">

@@ -13,7 +13,7 @@ function TgEnt() {
         scrollToRef={accordionRef}
         upperText="CONSUMER GRADE"
         lowerText="TACTICAL SUPPLY"
-        src={""}
+        src={"/videos/tg-ent-hero.mp4"}
       />
       <ProductSpotlight data={productSpotlightData.tgEnt} />
       <Accordion forwardRef={accordionRef} />
