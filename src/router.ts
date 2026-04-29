@@ -11,18 +11,20 @@ export type Path =
   | `/main`
   | `/main/field-operations/:slug`
   | `/main/strategic-aquisitions/:slug`
+  | `/procurement-summary`
   | `/request-a-quote`
   | `/t3cktrading`
   | `/tca-cbs`
   | `/tca-cbs/services/:slug`
   | `/tg-ent`
   | `/tggt-opc`
-  | `/tggt-opc/response/command-centers`
+  | `/tggt-opc/:domain/:slug`
 
 export type Params = {
   '/main/field-operations/:slug': { slug: string }
   '/main/strategic-aquisitions/:slug': { slug: string }
   '/tca-cbs/services/:slug': { slug: string }
+  '/tggt-opc/:domain/:slug': { domain: string; slug: string }
 }
 
 export type ModalPath = never

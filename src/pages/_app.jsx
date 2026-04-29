@@ -3,8 +3,9 @@ import Navbar from "../components/Navbar";
 import "./noisy.css";
 import Footer from "../components/Footer";
 import PageTransition from "../components/PageTransition";
+import QuoteCartModal from "../components/QuoteCartModal";
 
-function _layout() {
+function App() {
   const location = useLocation();
   return (
     <>
@@ -13,9 +14,10 @@ function _layout() {
       <PageTransition key={location.pathname}>
         <Outlet />
       </PageTransition>
+      <QuoteCartModal />
       <Footer />
     </>
   );
 }
 
-export default _layout;
+export default App;
