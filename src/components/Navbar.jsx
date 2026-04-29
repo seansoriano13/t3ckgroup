@@ -121,7 +121,7 @@ function Navbar() {
   return (
     <>
       <nav ref={navRef} className="z-100 fixed w-full top-0 transition-colors">
-        <SmallBanner className="banner hidden md:flex flex-wrap items-center justify-center lg:justify-end bg-red-1" />
+        <SmallBanner activeTab={activeTab} className="banner hidden md:flex flex-wrap items-center justify-between lg:justify-between bg-red-1 px-4 lg:px-8" />
         <div onMouseLeave={handleMouseLeave} className="w-full relative">
           <div className="wrapper py-2 flex justify-between items-center">
             <Link className="hover:scale-110 transition-all" to="/">
@@ -139,13 +139,22 @@ function Navbar() {
                   onMouseEnter={() => handleMouseEnter(navLink.menuKey)}
                   className="flex items-center justify-center group relative list-none py-4"
                 >
-                  <Link
-                    to={navLink.href || "/"}
-                    className="cursor-pointer relative z-10 block p-4 text-xs text-gray-12 hover:text-red-9 hover:bg-gray-a2 transition-all"
-                  >
-                    {navLink.label}
-                    {navLinkBorder()}
-                  </Link>
+                  {navLink.href ? (
+                    <Link
+                      to={navLink.href}
+                      className="cursor-pointer relative z-10 block p-4 text-xs text-gray-12 hover:text-red-9 hover:bg-gray-a2 transition-all"
+                    >
+                      {navLink.label}
+                      {navLinkBorder()}
+                    </Link>
+                  ) : (
+                    <button
+                      className="cursor-pointer relative z-10 block p-4 text-xs text-gray-12 hover:text-red-9 hover:bg-gray-a2 transition-all uppercase font-inherit"
+                    >
+                      {navLink.label}
+                      {navLinkBorder()}
+                    </button>
+                  )}
                   {(i === 3 && activeTab === 'main') && (
                     <div className="w-px h-6 ml-2 bg-gray-12 opacity-40"></div>
                   )}
