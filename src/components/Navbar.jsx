@@ -13,6 +13,7 @@ import { Link } from "react-router";
 import { Menu, ShoppingCart } from "lucide-react";
 import MobileMenu from "./MobileMenu.jsx";
 import { useCartStore } from "../store/useStore";
+import { SquarePen } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -126,22 +127,22 @@ function Navbar() {
       if (totalItems > lastCartCount.current) {
         // Animation when item is added
         const tl = gsap.timeline();
-        
+
         tl.to(cartIconRef.current, {
           scale: 1.4,
           color: "var(--red-9)",
           duration: 0.2,
           ease: "back.out(2)",
         })
-        .to(cartIconRef.current, {
-          scale: 1,
-          color: "var(--gray-12)",
-          duration: 0.5,
-          ease: "elastic.out(1, 0.3)",
-        });
+          .to(cartIconRef.current, {
+            scale: 1,
+            color: "var(--gray-12)",
+            duration: 0.5,
+            ease: "elastic.out(1, 0.3)",
+          });
 
         // Optional: Pointing arrow animation
-        gsap.fromTo(".cart-pointer", 
+        gsap.fromTo(".cart-pointer",
           { opacity: 0, y: 10 },
           { opacity: 1, y: 0, duration: 0.3, repeat: 1, yoyo: true, ease: "power2.out" }
         );
@@ -199,12 +200,12 @@ function Navbar() {
             </ul>
 
             <div className="hidden lg:flex items-center justify-center gap-4">
-              <button 
+              <button
                 ref={cartIconRef}
                 onClick={openCartModal}
                 className="relative text-gray-12 hover:text-white transition-colors"
               >
-                <ShoppingCart size={20} />
+                <SquarePen size={20} />
                 {cartItems.length > 0 && (
                   <span className="absolute -top-2 -right-2 bg-red-9 text-white text-[10px] w-4 h-4 flex-center rounded-full">
                     {cartItems.length}

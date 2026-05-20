@@ -21,16 +21,18 @@ export const useCartStore = create((set) => ({
   addToCart: (product) =>
     set((state) => {
       const existingItem = state.cartItems.find((item) => item.id === product.id);
+      const addedQuantity = product.quantity || 1;
+      
       if (existingItem) {
         return {
           cartItems: state.cartItems.map((item) =>
             item.id === product.id
-              ? { ...item, quantity: item.quantity + 1 }
+              ? { ...item, quantity: item.quantity + addedQuantity }
               : item
           ),
         };
       }
-      return { cartItems: [...state.cartItems, { ...product, quantity: 1 }] };
+      return { cartItems: [...state.cartItems, { ...product, quantity: addedQuantity }] };
     }),
 
   removeFromCart: (id) =>

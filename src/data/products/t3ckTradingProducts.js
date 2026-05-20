@@ -18,7 +18,21 @@ export const t3ckTradingProducts = [
     category: "STAGE AND TRUSSES",
     slug: "trusses",
     products: [
-      // Add more products here
+    ]
+  },
+  {
+    category: "HEAVY ELEVATION SYSTEMS",
+    slug: "heavy-elevation",
+    products: [
+      {
+        id: "t3ck-titan-01",
+        name: "Titan Series 50-Ton Crane",
+        sku: "TITAN-50T",
+        company: "T3CK TRADING",
+        category: "Heavy Elevation Systems",
+        image: "https://picsum.photos/800/600?random=101",
+        description: "The Titan Series represents the pinnacle of mobile elevation. Engineered for rapid deployment in rugged environments, offering uncompromised lifting power and precision hydraulics for mission-critical infrastructure builds and disaster response.",
+      }
     ]
   }
 ];

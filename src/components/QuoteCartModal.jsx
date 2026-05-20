@@ -1,6 +1,7 @@
 import { X, Trash2, ShoppingCart } from "lucide-react";
 import { useCartStore } from "../store/useStore";
 import { Link } from "react-router";
+import { SquarePen } from "lucide-react";
 
 function QuoteCartModal() {
   const {
@@ -26,7 +27,7 @@ function QuoteCartModal() {
         {/* HEADER */}
         <div className="flex-between border-b border-gray-3 pb-4">
           <div className="flex items-center gap-3">
-            <ShoppingCart className="text-gray-10" />
+            <SquarePen className="text-gray-10" />
             <h2 className="font-tactic text-xl text-white">
               PROCUREMENT SUMMARY
             </h2>
