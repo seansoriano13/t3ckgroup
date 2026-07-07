@@ -1,19 +1,19 @@
-import PrimaryButton from "./PrimaryButton";
-import SecondaryButton from "./SecondaryButton";
+import PrimaryButton from "./PrimaryButton"
+import SecondaryButton from "./SecondaryButton"
 
-import { getActiveTab } from "../utils/getActiveTab.js";
-import { Link, useLocation } from "react-router";
-import { footerData } from "../data/footer/footerData.js";
-import Grainient from "./filters/Grainient.jsx";
+import { getActiveTab } from "../utils/getActiveTab.js"
+import { Link, useLocation } from "react-router"
+import { footerData } from "../data/footer/footerData.js"
+import Grainient from "./filters/Grainient.jsx"
 
 function Footer() {
   const formatSubLabel = (label) =>
-    label.charAt(0).toUpperCase() + label.slice(1).toLowerCase();
-  const location = useLocation();
-  const pathname = location.pathname;
-  const activeTab = getActiveTab(pathname);
+    label.charAt(0).toUpperCase() + label.slice(1).toLowerCase()
+  const location = useLocation()
+  const pathname = location.pathname
+  const activeTab = getActiveTab(pathname)
 
-  const { links } = footerData[activeTab] || footerData.main;
+  const { links } = footerData[activeTab] || footerData.main
 
   return (
     <div className="relative overflow-hidden">
@@ -28,7 +28,9 @@ function Footer() {
             <Link to="/request-a-quote" className="w-full sm:w-auto">
               <PrimaryButton className={"text-sm"} label={"REQUEST A QUOTE"} />
             </Link>
-            <SecondaryButton className={"text-sm"} label={"CONTACT T3CK"} />
+            <Link to={"/contact-us"} className="w-full sm:w-auto">
+              <SecondaryButton className={"text-sm"} label={"CONTACT T3CK"} />
+            </Link>
           </div>
           <p className="text-gray-a5 text-sm mt-4 lg:mt-0">
             @ 2026 T3CKGROUP. ALL RIGHTS RESERVED.
@@ -65,7 +67,7 @@ function Footer() {
         {/* LINKS */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 lg:gap-y-6">
           {links?.map((link, i) => {
-            const isMain = activeTab === "main";
+            const isMain = activeTab === "main"
             return (
               <div
                 key={i}
@@ -87,13 +89,17 @@ function Footer() {
                   ))}
                 </ul>
               </div>
-            );
+            )
           })}
         </div>
       </div>
 
       <div className="relative pt-10 lg:pt-20 w-full h-32 lg:h-auto z-10 opacity-40 flex items-end overflow-hidden">
-        <img className="w-full object-cover min-w-[600px]" src="/footer-logo.png" alt="" />
+        <img
+          className="w-full object-cover min-w-[600px]"
+          src="/footer-logo.png"
+          alt=""
+        />
       </div>
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Grainient
@@ -122,7 +128,7 @@ function Footer() {
         />
       </div>
     </div>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

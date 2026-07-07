@@ -214,12 +214,12 @@ function DynamicCategoryPage() {
             {paginatedProducts.map((product) => (
               <div
                 key={product.id}
-                className="grid gap-2 w-full border border-gray-4 p-6 cursor-pointer hover:border-gray-6 transition-colors group text-gray-12 hover:text-red-9"
+                className="product-card"
                 onClick={() => setSelectedProduct(product)}
               >
                 <div className="relative flex-center bg-gray-a2 aspect-square p-6 overflow-hidden">
                   <img
-                    className="object-contain w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    className="object-contain w-full h-full product-card-image"
                     src={product.image}
                     alt={product.name}
                   />

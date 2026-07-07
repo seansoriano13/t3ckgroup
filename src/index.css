@@ -108,7 +108,22 @@
     background-color: rgba(0, 0, 0, 0.2); /* optional dim */
     z-index: 40; /* below nav if nav is z-50 */
   }
+
+  /* PRODUCT CARD HOVER BEHAVIOR */
+  .product-card {
+    @apply grid gap-2 w-full border border-gray-4 p-6 cursor-pointer text-gray-12 transition-colors;
+  }
+  .product-card:hover:not(:has(button:hover)) {
+    @apply border-gray-6 text-red-9;
+  }
+  .product-card-image {
+    @apply transition-transform duration-500;
+  }
+  .product-card:hover:not(:has(button:hover)) .product-card-image {
+    @apply scale-110;
+  }
 }
+
 
 /* =========================================
    2. GLOBAL CSS VARIABLES (THE HEX CODES)
