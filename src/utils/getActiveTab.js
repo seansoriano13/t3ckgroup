@@ -15,8 +15,9 @@ export const getActiveTab = (pathname) => {
       return "tgEnt";
     case "dii":
       return "dii";
+    case "eeoc":
     case "eooc":
-      return "eooc";
+      return "eeoc";
     case "contact-us":
       return "contactUs";
     case "request-a-quote":

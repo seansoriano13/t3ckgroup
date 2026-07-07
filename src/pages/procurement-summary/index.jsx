@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import { useCartStore } from "../../store/useStore";
-import Grainient from "../../components/filters/Grainient";
-import PrimaryButton from "../../components/PrimaryButton";
-import { Link } from "react-router";
-import { Trash2 } from "lucide-react";
+import { useEffect, useState } from "react"
+import { useCartStore } from "../../store/useStore"
+import Grainient from "../../components/filters/Grainient"
+import PrimaryButton from "../../components/PrimaryButton"
+import { Link } from "react-router"
+import { Trash2 } from "lucide-react"
 
-const focusStyle = "focus:outline-none focus:border-b-gray-10";
-const inputStyle = `h-12 placeholder:text-description placeholder:text-xs border-b border-gray-a6 ${focusStyle}`;
+const focusStyle = "focus:outline-none focus:border-b-gray-10"
+const inputStyle = `h-12 placeholder:text-description placeholder:text-xs border-b border-gray-a6 ${focusStyle}`
 
 function ProcurementSummary() {
-  const { cartItems, removeFromCart, updateQuantity } = useCartStore();
+  const { cartItems, removeFromCart, updateQuantity } = useCartStore()
 
   const [formData, setFormData] = useState({
     organization: "",
@@ -18,25 +18,25 @@ function ProcurementSummary() {
     designation: "",
     comms: "",
     vector: "",
-  });
+  })
 
   const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Submitting procurement request for:", cartItems, formData);
-  };
+    e.preventDefault()
+    console.log("Submitting procurement request for:", cartItems, formData)
+  }
 
-  const branchName = cartItems.length > 0 ? cartItems[0].company : "N/A";
+  const branchName = cartItems.length > 0 ? cartItems[0].company : "N/A"
 
   // Format total units
-  const totalUnits = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  const totalUnits = cartItems.reduce((acc, item) => acc + item.quantity, 0)
 
   return (
     <>
@@ -75,7 +75,7 @@ function ProcurementSummary() {
           </div>
 
           <h1 className="px-10 absolute top-12 -translate-x-1/2 left-1/2 w-full text-center text-[100px] leading-none text-gray-a3">
-            PROCUREMENT
+            PROCUREMENT SUMMARY
           </h1>
 
           {/* MAIN CONTENT STACKED LAYOUT */}
@@ -371,7 +371,7 @@ function ProcurementSummary() {
                 {/* Totals & Status Section */}
                 <div className="mb-12">
                   <h3 className="font-tactic text-xl font-black mb-3">
-                    TOTALS & STATUS SECTION
+                    TOTALS AND STATUS SECTION
                   </h3>
                   <div className="border-2 border-black">
                     {/* Table Header */}
@@ -434,7 +434,7 @@ function ProcurementSummary() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default ProcurementSummary;
+export default ProcurementSummary

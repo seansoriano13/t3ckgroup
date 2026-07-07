@@ -1,8 +1,13 @@
-import { DEFAULT_ICON } from "./shared.js";
+import { DEFAULT_ICON } from "./shared.js"
 
 export const main = {
   cta: "CONTACT US",
   links: [
+    {
+      label: "T3CKGROUP",
+      href: "/",
+      menuKey: "main",
+    },  
     {
       label: "TGGT OPC",
       href: "/tggt-opc",
@@ -185,7 +190,7 @@ export const main = {
       ],
     },
 
-    eooc: {
+    eeoc: {
       leftPanel: {
         title: "EVERY DAY EMERGENCY OPERATIONS CENTE",
         description:
@@ -213,4 +218,4 @@ export const main = {
       ],
     },
   },
-};
+}

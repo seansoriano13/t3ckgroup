@@ -82,7 +82,7 @@ export const accordionData = {
         "A centralized, always-on command hub providing real-time situational awareness, rapid response coordination, and critical communications support.",
       contentImage: eoocContent,
       mainImage: eoocMain,
-      link: "/eooc",
+      link: "/eeoc",
     },
   ],
   tggtOpc: [
@@ -345,7 +345,7 @@ export const accordionData = {
       mainImage: diiMain,
     },
   ],
-  eooc: [
+  eeoc: [
     {
       id: "eoocServices",
       title: "SERVICES",

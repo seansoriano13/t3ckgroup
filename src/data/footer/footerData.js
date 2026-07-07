@@ -689,7 +689,7 @@ export const footerData = {
       }
     ]
   },
-  "eooc": {
+  "eeoc": {
     "logo": "main-logo-w-text.png",
     "description": "Engineered for survival. Providing elite tactical, rescue, and infrastructure solutions for national defense and local resilience.",
     "cta": {
