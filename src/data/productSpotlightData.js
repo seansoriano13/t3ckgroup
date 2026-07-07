@@ -1,12 +1,13 @@
 export const productSpotlightData = {
   tggtOpc: {
+    productId: "ga-elite-01",
     category: "INDIVIDUAL SAFETY ILLUMINATION",
     title: "VISIBILITY IS SURVIVABILITY",
     description:
       "The Guardian Angel Elite Series delivers 360-degree high-intensity illumination for tactical, rescue, and law enforcement operations. Engineered to be visible from 5+ miles while keeping operators hands-free in the most hostile environments.",
     mainProductImage: "/product-spotlight/ga-elite-hero.webp", // Update with your actual path
     ctaLabel: "EXPLORE MORE",
-    ctaLink: "/tg-global/products/guardian-angel",
+    ctaLink: "/tggt-opc/response/guardian-angel",
 
     features: {
       title: "Operational Mounting",
@@ -41,6 +42,7 @@ export const productSpotlightData = {
     },
   },
   t3ckTrading: {
+    productId: "t3ck-titan-01",
     category: "HEAVY ELEVATION SYSTEMS",
     title: "TITAN SERIES 50-TON CRANE",
     description:
@@ -74,6 +76,7 @@ export const productSpotlightData = {
     },
   },
   tgEnt: {
+    productId: "tg-ent-shadow-01",
     category: "ESSENTIAL EXPEDITION GEAR",
     title: "SHADOW-STRIKE TACTICAL PACK",
     description:

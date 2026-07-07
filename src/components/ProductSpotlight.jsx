@@ -1,13 +1,35 @@
 import PrimaryButton from "./PrimaryButton";
 import { useState } from "react";
 import DarkVeil from "./filters/DarkVeil.jsx";
+import ProductDetailModal from "./ProductDetailModal";
+import { useNavigate } from "react-router";
 
 function ProductSpotlight({ data }) {
+  const navigate = useNavigate();
   const productSpotlightContents = data || {};
 
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const productFeatures = productSpotlightContents?.features?.options || [];
+
+  const handleExploreMore = () => {
+    if (productSpotlightContents.ctaLink && window.location.pathname !== productSpotlightContents.ctaLink) {
+      navigate(productSpotlightContents.ctaLink, {
+        state: { openModalWithProductId: productSpotlightContents.productId || "spotlight-product" }
+      });
+    } else {
+      setIsModalOpen(true);
+    }
+  };
+
+  const productForModal = {
+    id: productSpotlightContents.productId || "spotlight-product",
+    name: productSpotlightContents.title,
+    description: productSpotlightContents.description,
+    image: productSpotlightContents.mainProductImage,
+    category: productSpotlightContents.category,
+  };
 
   return (
     <div className="relative min-h-screen-nav">
@@ -95,9 +117,15 @@ function ProductSpotlight({ data }) {
         </div>
 
         <div className="flex-center mt-10">
-          <PrimaryButton className="px-7 py-4" label="EXPLORE MORE" />
+          <PrimaryButton className="px-7 py-4" label="EXPLORE MORE" onClick={handleExploreMore} />
         </div>
       </div>
+
+      <ProductDetailModal
+        product={productForModal}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }

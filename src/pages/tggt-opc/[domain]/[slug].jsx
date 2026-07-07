@@ -8,11 +8,11 @@ import {
 } from "lucide-react";
 import { useNavbarHeight } from "../../../utils/useNavbarHeight";
 import PrimaryButton from "../../../components/PrimaryButton";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useCartStore } from "../../../store/useStore";
 import ProductDetailModal from "../../../components/ProductDetailModal";
 import { tggtOpcProducts } from "../../../data/products/tggtOpcProducts";
-import { useParams } from "react-router";
+import { useParams, useLocation } from "react-router";
 
 function DynamicCategoryPage() {
   const navHeight = useNavbarHeight();
@@ -40,6 +40,20 @@ function DynamicCategoryPage() {
       ) || null
     );
   }, [domain, slug]);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.openModalWithProductId && categoryData) {
+      const productToOpen = categoryData.products.find(
+        (p) => p.id === location.state.openModalWithProductId
+      );
+      if (productToOpen) {
+        setSelectedProduct(productToOpen);
+        window.history.replaceState({}, document.title);
+      }
+    }
+  }, [location.state, categoryData]);
 
   // Filter products based on search query
   const filteredProducts = useMemo(() => {

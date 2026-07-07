@@ -159,6 +159,24 @@ export const tggtOpcProducts = [
         image: "https://images.cdn-files-a.com/uploads/6982347/800_643ba5c465463.png"
       }
     ]
+  },
+
+  // SPOTLIGHT DOMAIN
+  {
+    domain: "response",
+    category: "INDIVIDUAL SAFETY ILLUMINATION",
+    slug: "guardian-angel",
+    products: [
+      {
+        id: "ga-elite-01",
+        name: "Guardian Angel Elite",
+        sku: "GA-ELITE-1",
+        company: "TGGT OPC",
+        category: "Individual Safety Illumination",
+        image: "/product-spotlight/ga-elite-hero.webp",
+        description: "The Guardian Angel Elite Series delivers 360-degree high-intensity illumination for tactical, rescue, and law enforcement operations. Engineered to be visible from 5+ miles while keeping operators hands-free in the most hostile environments.",
+      }
+    ]
   }
 ];
 
